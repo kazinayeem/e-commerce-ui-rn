@@ -12,13 +12,15 @@ const Stack = createNativeStackNavigator();
 function RootStack() {
   return (
     <Stack.Navigator
-    
       screenOptions={{
+        
         headerShown: false,
         presentation: 'modal',
         animation: 'flip',
         animationDuration: 9000,
         animationMatchesGesture: true,
+        gestureEnabled: true,
+        gestureDirection: 'vertical',
       }}>
       <Stack.Screen name="Home" component={Screen1} />
       <Stack.Screen name="Home2" component={Screen2} />
