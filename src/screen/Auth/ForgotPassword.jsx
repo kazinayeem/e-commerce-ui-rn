@@ -7,75 +7,38 @@ import {
 } from 'react-native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import {useNavigation} from '@react-navigation/native';
-const SignIn = () => {
-  const navigation = useNavigation();
+
+const ForgotPassword = () => {
   return (
     <View style={styles.container}>
       <View style={styles.textContainer}>
-        <Text style={styles.headerText}>Welcome </Text>
-        <Text style={styles.headerText}>Back! </Text>
+        <Text style={styles.headerText}>Forgot </Text>
+        <Text style={styles.headerText}>Password ? </Text>
       </View>
       <View>
         <View style={styles.textInputContainer}>
-          <Icon name="user" size={24} color="#626262" />
+          <Icon name="envelope-o" size={24} color="#626262" />
           <TextInput
             style={styles.textInput}
-            placeholder="Username or Email"
+            placeholder="Enter your email address"
             placeholderTextColor="#8c8c8c"
           />
-        </View>
-
-        <View style={styles.textInputContainer}>
-          <Icon name="lock" size={24} color="#626262" />
-          <TextInput
-            placeholder="Password"
-            placeholderTextColor="#8c8c8c"
-            secureTextEntry
-            style={styles.textInput}
-          />
-          <Icon name="eye" size={20} color="#626262" />
         </View>
       </View>
-      <TouchableOpacity onPress={() => navigation.navigate('ForgotPassword')}>
-        <Text style={styles.forgotPasswordText}>Forgot Password?</Text>
+      <TouchableOpacity>
+        <Text style={styles.RegisterText}>
+          * We will send you a message to set or reset your new password
+        </Text>
       </TouchableOpacity>
 
       <TouchableOpacity style={styles.loginButton}>
-        <Text style={styles.loginButtonText}>Login</Text>
+        <Text style={styles.loginButtonText}>Submit</Text>
       </TouchableOpacity>
-
-      <Text style={styles.orText}>- OR Continue with -</Text>
-
-      <View style={styles.socialContainer}>
-        <TouchableOpacity style={styles.socialButton}>
-          <Icon name="google" size={30} color="#000" />
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.socialButton}>
-          <Icon name="apple" size={30} color="#000" />
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.socialButton}>
-          <Icon name="facebook" size={30} color="#3b5998" />
-        </TouchableOpacity>
-      </View>
-
-      {/* Create Account */}
-      <View style={styles.footer}>
-        <Text style={styles.footerText}>Create An Account</Text>
-        <TouchableOpacity>
-          <Text
-            style={styles.signUpText}
-            onPress={() => navigation.navigate('SignUp')}>
-            {' '}
-            Sign Up
-          </Text>
-        </TouchableOpacity>
-      </View>
     </View>
   );
 };
 
-export default SignIn;
+export default ForgotPassword;
 
 const styles = StyleSheet.create({
   container: {
@@ -110,10 +73,10 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#000',
   },
-  forgotPasswordText: {
-    color: '#ff5a5f',
+  RegisterText: {
+    color: '#676767',
     fontSize: 14,
-    alignSelf: 'flex-end',
+    alignSelf: 'flex-start',
     marginBottom: 20,
   },
   loginButton: {

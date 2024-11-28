@@ -6,6 +6,8 @@ import Screen2 from './screen/SplashScreen/Screen2';
 import Screen3 from './screen/SplashScreen/Screen3';
 import SignIn from './screen/Auth/SignIn';
 import SignUp from './screen/Auth/SignUp';
+import ForgotPassword from './screen/Auth/ForgotPassword';
+import GetStarted from './screen/main/GetStarted';
 
 const Stack = createNativeStackNavigator();
 
@@ -13,7 +15,6 @@ function RootStack() {
   return (
     <Stack.Navigator
       screenOptions={{
-        
         headerShown: false,
         presentation: 'modal',
         animation: 'flip',
@@ -27,6 +28,8 @@ function RootStack() {
       <Stack.Screen name="Home3" component={Screen3} />
       <Stack.Screen name="SignIn" component={SignIn} />
       <Stack.Screen name="SignUp" component={SignUp} />
+      <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
+      <Stack.Screen name="GetStarted" component={GetStarted} />
     </Stack.Navigator>
   );
 }
