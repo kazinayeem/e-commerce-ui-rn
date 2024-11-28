@@ -10,8 +10,8 @@ const Screen1 = () => {
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.HeaderText}>1/3</Text>
-        <TouchableOpacity>
-          <Text style={styles.HeaderText}>Skip</Text>
+        <TouchableOpacity onPress={() => navigation.navigate('SignIn')}>
+          <Text style={styles.HeaderText} >Skip</Text>
         </TouchableOpacity>
       </View>
 

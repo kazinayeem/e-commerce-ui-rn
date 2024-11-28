@@ -10,7 +10,7 @@ const Screen2 = () => {
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.HeaderText}>1/3</Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('SignIn')}>
           <Text style={styles.HeaderText}>Skip</Text>
         </TouchableOpacity>
       </View>
@@ -47,7 +47,7 @@ const Screen2 = () => {
           <TouchableOpacity style={styles.nextbtn}>
             <Text
               style={styles.nextbtntext}
-              onPress={() => navigation.navigate('Home3')}>
+              onPress={() => navigation.navigate('SignIn')}>
               Get Started
             </Text>
           </TouchableOpacity>
