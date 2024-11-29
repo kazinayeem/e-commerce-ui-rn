@@ -8,8 +8,11 @@ import {
 } from 'react-native';
 import React from 'react';
 import {GetStartimage} from '../../config/Image';
+import {useNavigation} from '@react-navigation/native';
 
 const GetStarted = () => {
+  const navigator = useNavigation();
+
   return (
     <View style={styles.container}>
       <ImageBackground
@@ -41,7 +44,9 @@ const GetStarted = () => {
             }}>
             Find it here, buy it now!
           </Text>
-          <TouchableOpacity style={styles.loginButton}>
+          <TouchableOpacity
+            style={styles.loginButton}
+            onPress={() => navigator.navigate('MyDrawer')}>
             <Text style={styles.loginButtonText}>Get Started</Text>
           </TouchableOpacity>
         </View>

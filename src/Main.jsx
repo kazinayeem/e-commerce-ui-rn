@@ -8,6 +8,7 @@ import SignIn from './screen/Auth/SignIn';
 import SignUp from './screen/Auth/SignUp';
 import ForgotPassword from './screen/Auth/ForgotPassword';
 import GetStarted from './screen/main/GetStarted';
+import MyDrawer from './Drawer';
 
 const Stack = createNativeStackNavigator();
 
@@ -16,13 +17,8 @@ function RootStack() {
     <Stack.Navigator
       screenOptions={{
         headerShown: false,
-        presentation: 'modal',
-        animation: 'flip',
-        animationDuration: 9000,
-        animationMatchesGesture: true,
-        gestureEnabled: true,
-        gestureDirection: 'vertical',
       }}>
+      <Stack.Screen name="MyDrawer" component={MyDrawer} />
       <Stack.Screen name="Home" component={Screen1} />
       <Stack.Screen name="Home2" component={Screen2} />
       <Stack.Screen name="Home3" component={Screen3} />

@@ -7,9 +7,12 @@
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "aab": "cd android && gradlew assembleDebug"
   },
   "dependencies": {
+    "@react-navigation/bottom-tabs": "^7.0.14",
+    "@react-navigation/drawer": "^7.0.14",
     "@react-navigation/elements": "^2.1.6",
     "@react-navigation/native": "^7.0.7",
     "@react-navigation/native-stack": "^7.1.8",
@@ -17,6 +20,7 @@
     "react-native": "0.76.3",
     "react-native-asset": "^2.1.1",
     "react-native-gesture-handler": "^2.21.2",
+    "react-native-reanimated": "^3.16.3",
     "react-native-safe-area-context": "^4.14.0",
     "react-native-screens": "^4.3.0",
     "react-native-vector-icons": "^10.2.0"

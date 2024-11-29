@@ -465,7 +465,7 @@
     "@babel/helper-create-regexp-features-plugin" "^7.18.6"
     "@babel/helper-plugin-utils" "^7.18.6"
 
-"@babel/plugin-transform-arrow-functions@^7.24.7", "@babel/plugin-transform-arrow-functions@^7.25.9":
+"@babel/plugin-transform-arrow-functions@^7.0.0-0", "@babel/plugin-transform-arrow-functions@^7.24.7", "@babel/plugin-transform-arrow-functions@^7.25.9":
   version "7.25.9"
   resolved "https://registry.npmjs.org/@babel/plugin-transform-arrow-functions/-/plugin-transform-arrow-functions-7.25.9.tgz"
   integrity sha512-6jmooXYIwn9ca5/RylZADJ+EnSxVUS5sjeJ9UPk6RWRzXCmOJCy6dqItPJFpw2cuCangPK4OYr5uhGKcmrm5Qg==
@@ -504,7 +504,7 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.25.9"
 
-"@babel/plugin-transform-class-properties@^7.25.4", "@babel/plugin-transform-class-properties@^7.25.9":
+"@babel/plugin-transform-class-properties@^7.0.0-0", "@babel/plugin-transform-class-properties@^7.25.4", "@babel/plugin-transform-class-properties@^7.25.9":
   version "7.25.9"
   resolved "https://registry.npmjs.org/@babel/plugin-transform-class-properties/-/plugin-transform-class-properties-7.25.9.tgz"
   integrity sha512-bbMAII8GRSkcd0h0b4X+36GksxuheLFjP65ul9w6C3KgAamI3JqErNgSrosX6ZPj+Mpim5VvEbawXxJCyEUV3Q==
@@ -520,7 +520,7 @@
     "@babel/helper-create-class-features-plugin" "^7.25.9"
     "@babel/helper-plugin-utils" "^7.25.9"
 
-"@babel/plugin-transform-classes@^7.25.4", "@babel/plugin-transform-classes@^7.25.9":
+"@babel/plugin-transform-classes@^7.0.0-0", "@babel/plugin-transform-classes@^7.25.4", "@babel/plugin-transform-classes@^7.25.9":
   version "7.25.9"
   resolved "https://registry.npmjs.org/@babel/plugin-transform-classes/-/plugin-transform-classes-7.25.9.tgz"
   integrity sha512-mD8APIXmseE7oZvZgGABDyM34GUmK45Um2TXiBUt7PnuAxrgoSVf123qUzPxEr/+/BHrRn5NMZCdE2m/1F8DGg==
@@ -695,7 +695,7 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.25.9"
 
-"@babel/plugin-transform-nullish-coalescing-operator@^7.24.7", "@babel/plugin-transform-nullish-coalescing-operator@^7.25.9":
+"@babel/plugin-transform-nullish-coalescing-operator@^7.0.0-0", "@babel/plugin-transform-nullish-coalescing-operator@^7.24.7", "@babel/plugin-transform-nullish-coalescing-operator@^7.25.9":
   version "7.25.9"
   resolved "https://registry.npmjs.org/@babel/plugin-transform-nullish-coalescing-operator/-/plugin-transform-nullish-coalescing-operator-7.25.9.tgz"
   integrity sha512-ENfftpLZw5EItALAD4WsY/KUWvhUlZndm5GC7G3evUsVeSJB6p0pBeLQUnRnBCBx7zV0RKQjR9kCuwrsIrjWog==
@@ -733,7 +733,7 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.25.9"
 
-"@babel/plugin-transform-optional-chaining@^7.24.8", "@babel/plugin-transform-optional-chaining@^7.25.9":
+"@babel/plugin-transform-optional-chaining@^7.0.0-0", "@babel/plugin-transform-optional-chaining@^7.24.8", "@babel/plugin-transform-optional-chaining@^7.25.9":
   version "7.25.9"
   resolved "https://registry.npmjs.org/@babel/plugin-transform-optional-chaining/-/plugin-transform-optional-chaining-7.25.9.tgz"
   integrity sha512-6AvV0FsLULbpnXeBjrY4dmWF8F7gf8QnvTEoO/wX/5xm/xE1Xo8oPuD3MPS+KS9f9XBEAWN7X1aWr4z9HdOr7A==
@@ -839,7 +839,7 @@
     babel-plugin-polyfill-regenerator "^0.6.1"
     semver "^6.3.1"
 
-"@babel/plugin-transform-shorthand-properties@^7.24.7", "@babel/plugin-transform-shorthand-properties@^7.25.9":
+"@babel/plugin-transform-shorthand-properties@^7.0.0-0", "@babel/plugin-transform-shorthand-properties@^7.24.7", "@babel/plugin-transform-shorthand-properties@^7.25.9":
   version "7.25.9"
   resolved "https://registry.npmjs.org/@babel/plugin-transform-shorthand-properties/-/plugin-transform-shorthand-properties-7.25.9.tgz"
   integrity sha512-MUv6t0FhO5qHnS/W8XCbHmiRWOphNufpE1IVxhK5kuN3Td9FT1x4rx4K42s3RYdMXCXpfWkGSbCSd0Z64xA7Ng==
@@ -861,7 +861,7 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.25.9"
 
-"@babel/plugin-transform-template-literals@^7.25.9":
+"@babel/plugin-transform-template-literals@^7.0.0-0", "@babel/plugin-transform-template-literals@^7.25.9":
   version "7.25.9"
   resolved "https://registry.npmjs.org/@babel/plugin-transform-template-literals/-/plugin-transform-template-literals-7.25.9.tgz"
   integrity sha512-o97AE4syN71M/lxrCtQByzphAdlYluKPDBzDVzMmfCobUjjhAryZV0AIpRPrxN0eAkxXO6ZLEScmt+PNhj2OTw==
@@ -901,7 +901,7 @@
     "@babel/helper-create-regexp-features-plugin" "^7.25.9"
     "@babel/helper-plugin-utils" "^7.25.9"
 
-"@babel/plugin-transform-unicode-regex@^7.24.7", "@babel/plugin-transform-unicode-regex@^7.25.9":
+"@babel/plugin-transform-unicode-regex@^7.0.0-0", "@babel/plugin-transform-unicode-regex@^7.24.7", "@babel/plugin-transform-unicode-regex@^7.25.9":
   version "7.25.9"
   resolved "https://registry.npmjs.org/@babel/plugin-transform-unicode-regex/-/plugin-transform-unicode-regex-7.25.9.tgz"
   integrity sha512-yoxstj7Rg9dlNn9UQxzk4fcNivwv4nUYz7fYXBaKxvw/lnmPuOm/ikoELygbYq68Bls3D/D+NBPHiLwZdZZ4HA==
@@ -1010,7 +1010,7 @@
     "@babel/types" "^7.4.4"
     esutils "^2.0.2"
 
-"@babel/preset-typescript@^7.13.0":
+"@babel/preset-typescript@^7.13.0", "@babel/preset-typescript@^7.16.7":
   version "7.26.0"
   resolved "https://registry.npmjs.org/@babel/preset-typescript/-/preset-typescript-7.26.0.tgz"
   integrity sha512-NMk1IGZ5I/oHhoXEElcm+xUnL/szL6xflkFZmoEU9xj1qSJXpiS7rsspYo92B4DRCDvZn2erT5LdsCeXAKNCkg==
@@ -1796,12 +1796,20 @@
     invariant "^2.2.4"
     nullthrows "^1.1.1"
 
-"@react-navigation/core@^7.1.1":
-  version "7.1.1"
-  resolved "https://registry.npmjs.org/@react-navigation/core/-/core-7.1.1.tgz"
-  integrity sha512-i1E1c4xCR4v2Qwry0XtlT3zG9LNjI/Q9YP98hFzK1YDzFmsFjyYCquYU5seV8GakJorQ8vivorGeQeWjlLGW3w==
+"@react-navigation/bottom-tabs@^7.0.14":
+  version "7.0.14"
+  resolved "https://registry.npmjs.org/@react-navigation/bottom-tabs/-/bottom-tabs-7.0.14.tgz"
+  integrity sha512-mgS3RYGFPXpg/HmBsnNdlaSI1QLRy1lVAClXvyMSkG6XbWhYGWftoYgxpDfCPAMSMVNuKwJWABLVfj8DZ/iiSA==
   dependencies:
-    "@react-navigation/routers" "^7.1.0"
+    "@react-navigation/elements" "^2.2.0"
+    color "^4.2.3"
+
+"@react-navigation/core@^7.1.2":
+  version "7.1.2"
+  resolved "https://registry.npmjs.org/@react-navigation/core/-/core-7.1.2.tgz"
+  integrity sha512-oqp5gxITz33uRjVOx86TQHslwhruGNPjago/fBmOb6LNWi0HwKgiExo9FEfx8lp9pXKtKW0HBZJscUGVvPWYhA==
+  dependencies:
+    "@react-navigation/routers" "^7.1.1"
     escape-string-regexp "^4.0.0"
     nanoid "3.3.7"
     query-string "^7.1.3"
@@ -1809,10 +1817,20 @@
     use-latest-callback "^0.2.1"
     use-sync-external-store "^1.2.2"
 
-"@react-navigation/elements@^2.1.6", "@react-navigation/elements@^2.1.7":
-  version "2.1.7"
-  resolved "https://registry.npmjs.org/@react-navigation/elements/-/elements-2.1.7.tgz"
-  integrity sha512-MFeImIuJrE2D45SNptQitoNUeCmyq8Yt+a7HKvDP4W0g8j9UcF5LCWPae7FjWKbSq8G60o5XTN8MZImaik4vaw==
+"@react-navigation/drawer@^7.0.14":
+  version "7.0.14"
+  resolved "https://registry.npmjs.org/@react-navigation/drawer/-/drawer-7.0.14.tgz"
+  integrity sha512-e0M2F8tfLzaLhh3XXLlA/aRf/hCTtrATl6NAFJypzaLm1uLHpwYI2nicEZ7SlVpV0/6cGsSLCseBSSVc6wwtfg==
+  dependencies:
+    "@react-navigation/elements" "^2.2.0"
+    color "^4.2.3"
+    react-native-drawer-layout "^4.0.3"
+    use-latest-callback "^0.2.1"
+
+"@react-navigation/elements@^2.1.6", "@react-navigation/elements@^2.1.7", "@react-navigation/elements@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.npmjs.org/@react-navigation/elements/-/elements-2.2.0.tgz"
+  integrity sha512-+DIVCwaJsVCk/yPf5N1NKyRkQ8/jrLh8FRfqgzxAygrOgAYuqI6cZGvAJvOhNTbbgek1Lq1J2UOWn1wIDxPwag==
   dependencies:
     color "^4.2.3"
 
@@ -1824,21 +1842,21 @@
     "@react-navigation/elements" "^2.1.7"
     warn-once "^0.1.1"
 
-"@react-navigation/native@^7.0.7", "@react-navigation/native@^7.0.8":
-  version "7.0.8"
-  resolved "https://registry.npmjs.org/@react-navigation/native/-/native-7.0.8.tgz"
-  integrity sha512-L1FYVCBqR5SWBabQbinfIJdJvv41pk/JG+PHANjxXj+WTWrZ75GKjTjmn5a7be94Dwhl5v8DCyD5T4SOHJq6UA==
+"@react-navigation/native@^7.0.7", "@react-navigation/native@^7.0.8", "@react-navigation/native@^7.0.9":
+  version "7.0.9"
+  resolved "https://registry.npmjs.org/@react-navigation/native/-/native-7.0.9.tgz"
+  integrity sha512-VR2TSUCfYYNrql8VMkt4jajchUe24bOeUuj1ReaD7qFLxyT3/vxI/x8gDbf6lLIKo3KBS8g1JEA9rt48PO/Mmw==
   dependencies:
-    "@react-navigation/core" "^7.1.1"
+    "@react-navigation/core" "^7.1.2"
     escape-string-regexp "^4.0.0"
     fast-deep-equal "^3.1.3"
     nanoid "3.3.7"
     use-latest-callback "^0.2.1"
 
-"@react-navigation/routers@^7.1.0":
-  version "7.1.0"
-  resolved "https://registry.npmjs.org/@react-navigation/routers/-/routers-7.1.0.tgz"
-  integrity sha512-ln9/U4vbUKno8l5GcB0dj0QMXFfRDhTfL7WOGJnPEPHAq99PnlyrsDXpqKGOTH9qtLzrfSjR1QQomnQ9i/tGEg==
+"@react-navigation/routers@^7.1.1":
+  version "7.1.1"
+  resolved "https://registry.npmjs.org/@react-navigation/routers/-/routers-7.1.1.tgz"
+  integrity sha512-OycWRj95p+/zENl9HU6tvvT6IUuxgVJirgsA0W9rQn3RC+9Hb0UVYA0+8avdt+WpMoWdrvwTxTXneB5mjYzHrw==
   dependencies:
     nanoid "3.3.7"
 
@@ -5890,7 +5908,14 @@ react-native-asset@^2.1.1:
     sha1-file "^1.0.4"
     xcode "^2.0.0"
 
-react-native-gesture-handler@^2.21.2:
+react-native-drawer-layout@^4.0.3:
+  version "4.0.3"
+  resolved "https://registry.npmjs.org/react-native-drawer-layout/-/react-native-drawer-layout-4.0.3.tgz"
+  integrity sha512-JCc3UtXQMpW9iQr7JqW2bGPt3+Dl/0z3+rDM43jbqE45kltwhyG/MmVM/ltD/ySfPkik2oVdHm5Uk82MLpo57A==
+  dependencies:
+    use-latest-callback "^0.2.1"
+
+react-native-gesture-handler@^2.21.2, "react-native-gesture-handler@>= 2.0.0":
   version "2.21.2"
   resolved "https://registry.npmjs.org/react-native-gesture-handler/-/react-native-gesture-handler-2.21.2.tgz"
   integrity sha512-HcwB225K9aeZ8e/B8nFzEh+2T4EPWTeamO1l/y3PcQ9cyCDYO2zja/G31ITpYRIqkip7XzGs6wI/gnHOQn1LDQ==
@@ -5899,6 +5924,23 @@ react-native-gesture-handler@^2.21.2:
     hoist-non-react-statics "^3.3.0"
     invariant "^2.2.4"
     prop-types "^15.7.2"
+
+react-native-reanimated@^3.16.3, "react-native-reanimated@>= 2.0.0":
+  version "3.16.3"
+  resolved "https://registry.npmjs.org/react-native-reanimated/-/react-native-reanimated-3.16.3.tgz"
+  integrity sha512-OWlA6e1oHhytTpc7WiSZ7Tmb8OYwLKYZz29Sz6d6WAg60Hm5GuAiKIWUG7Ako7FLcYhFkA0pEQ2xPMEYUo9vlw==
+  dependencies:
+    "@babel/plugin-transform-arrow-functions" "^7.0.0-0"
+    "@babel/plugin-transform-class-properties" "^7.0.0-0"
+    "@babel/plugin-transform-classes" "^7.0.0-0"
+    "@babel/plugin-transform-nullish-coalescing-operator" "^7.0.0-0"
+    "@babel/plugin-transform-optional-chaining" "^7.0.0-0"
+    "@babel/plugin-transform-shorthand-properties" "^7.0.0-0"
+    "@babel/plugin-transform-template-literals" "^7.0.0-0"
+    "@babel/plugin-transform-unicode-regex" "^7.0.0-0"
+    "@babel/preset-typescript" "^7.16.7"
+    convert-source-map "^2.0.0"
+    invariant "^2.2.4"
 
 react-native-safe-area-context@^4.14.0, "react-native-safe-area-context@>= 4.0.0":
   version "4.14.0"
