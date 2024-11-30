@@ -3,6 +3,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import React from 'react';
 import Page from './screen/Page';
+import Product from './screen/product/Product';
 
 const Tab = createBottomTabNavigator();
 
@@ -24,7 +25,7 @@ function MyTabs() {
         tabBarActiveTintColor: 'tomato',
         tabBarInactiveTintColor: 'gray',
       })}>
-      <Tab.Screen name="Page1" component={Page} />
+      <Tab.Screen name="Page1" component={Product} />
       <Tab.Screen name="Page2" component={Page} />
     </Tab.Navigator>
   );
