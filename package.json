@@ -17,6 +17,7 @@
     "@react-navigation/native": "^7.0.7",
     "@react-navigation/native-stack": "^7.1.8",
     "axios": "^1.7.8",
+    "fbjs": "^3.0.5",
     "react": "18.3.1",
     "react-native": "0.76.3",
     "react-native-asset": "^2.1.1",
