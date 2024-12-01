@@ -1,4 +1,11 @@
-import {View, Text, FlatList, Image, TouchableOpacity} from 'react-native';
+import {
+  View,
+  Text,
+  FlatList,
+  Image,
+  TouchableOpacity,
+  ActivityIndicator,
+} from 'react-native';
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import {StarRatingDisplay} from 'react-native-star-rating-widget';
@@ -114,12 +121,23 @@ const ProductShow = ({star}) => {
         width: '97%',
         alignSelf: 'center',
       }}>
-      <FlatList
-        horizontal
-        data={product}
-        renderItem={({item}) => <Item item={item} star={star} />}
-        keyExtractor={item => item.id}
-      />
+      {product.length === 0 ? (
+        <>
+          <ActivityIndicator size="large" color="#6666" />
+          <ActivityIndicator size="large" color="#3434" />
+          <ActivityIndicator size="large" color="#355" />
+          <ActivityIndicator size="large" color="#3423" />
+        </>
+      ) : (
+        <>
+          <FlatList
+            horizontal
+            data={product}
+            renderItem={({item}) => <Item item={item} star={star} />}
+            keyExtractor={item => item.id}
+          />
+        </>
+      )}
     </View>
   );
 };

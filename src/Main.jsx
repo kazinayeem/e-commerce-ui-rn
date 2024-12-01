@@ -15,11 +15,9 @@ const Stack = createNativeStackNavigator();
 function RootStack() {
   return (
     <Stack.Navigator
-      initialRouteName="Home"
       screenOptions={{
         headerShown: false,
       }}>
-      <Stack.Screen name="MyDrawer" component={MyDrawer} />
       <Stack.Screen name="Home" component={Screen1} />
       <Stack.Screen name="Home2" component={Screen2} />
       <Stack.Screen name="Home3" component={Screen3} />
@@ -27,6 +25,7 @@ function RootStack() {
       <Stack.Screen name="SignUp" component={SignUp} />
       <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
       <Stack.Screen name="GetStarted" component={GetStarted} />
+      <Stack.Screen name="MyDrawer" component={MyDrawer} />
     </Stack.Navigator>
   );
 }

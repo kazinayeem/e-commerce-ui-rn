@@ -1,5 +1,3 @@
-/* eslint-disable react-native/no-inline-styles */
-/* eslint-disable react/no-unstable-nested-components */
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import React from 'react';
 import MyTabs from './Tab';

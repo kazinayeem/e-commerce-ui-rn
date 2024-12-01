@@ -2,11 +2,11 @@ import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-const All_Featured = () => {
+const All_Featured = (props) => {
   return (
     <View style={styles.container}>
       <View style={styles.maintextcontainer}>
-        <Text style={styles.maintext}>All Featured</Text>
+        <Text style={styles.maintext}>{props.title}</Text>
       </View>
 
       <View style={styles.btnContainer}>

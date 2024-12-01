@@ -9,12 +9,13 @@ import ProductShow from './ProductShow';
 import {Banner2, Mac, Sponsor, Summer, Tranding} from '../../config/Image';
 
 const Product = () => {
+  
   useEffect(() => {}, []);
   return (
     <View style={{flex: 1}}>
       <SearchBar />
       <ScrollView>
-        <All_Featured />
+        <All_Featured title={'All Featured'} />
         <Category data={data} />
         <DealOnTime />
         <ProductShow star={true} />
