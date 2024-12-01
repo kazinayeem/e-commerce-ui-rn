@@ -74,8 +74,56 @@
       "sha1": "04f69417392da5f6f831fd89e6ff5698323fdecb"
     },
     {
-      "path": "assets/images/fashion shop-rafiki 2.png",
+      "path": "assets/images/banner.png",
+      "sha1": "5bbcf677e064b486cc0ceb39a1662472871e94b5"
+    },
+    {
+      "path": "assets/images/banner2.png",
+      "sha1": "b6f620d58b4fbafe82eb29497607ddb7204d143f"
+    },
+    {
+      "path": "assets/images/dealonphoto.png",
+      "sha1": "f21576c0d10626162bd4aea532ea3e0d7025bb3c"
+    },
+    {
+      "path": "assets/images/getstartimage.png",
+      "sha1": "ce8a9f6e42db67cd83e257bc5a60833c46081a80"
+    },
+    {
+      "path": "assets/images/Group33769.png",
+      "sha1": "10d9d0e1969a7266d9d6819b35bf308ffc9b2a50"
+    },
+    {
+      "path": "assets/images/image1.png",
       "sha1": "bbe47e920dddb666fce41635a88e9acb7afa0651"
+    },
+    {
+      "path": "assets/images/image2.png",
+      "sha1": "bc246748cdbf59c642cc7af514155956a36581d1"
+    },
+    {
+      "path": "assets/images/image3.png",
+      "sha1": "d25e86381c7b2b8655261cf4dde40cc4f23a6f47"
+    },
+    {
+      "path": "assets/images/logo.png",
+      "sha1": "fb251636ac5697b27280d8e292d5c6d968d731a0"
+    },
+    {
+      "path": "assets/images/mac.png",
+      "sha1": "735eae7ef4041d35f62162294384f11b77426d4f"
+    },
+    {
+      "path": "assets/images/sponsor.png",
+      "sha1": "cdf0cd49c0d5fd33ee44948d93c43ade8ade4c4f"
+    },
+    {
+      "path": "assets/images/summer.png",
+      "sha1": "10d9d0e1969a7266d9d6819b35bf308ffc9b2a50"
+    },
+    {
+      "path": "assets/images/trandingproduct.png",
+      "sha1": "ce49705a55fc498f921f27f8a38544a1eff06065"
     }
   ]
 }

@@ -9,7 +9,7 @@ import {Logo} from './config/Image';
 import SignIn from './screen/Auth/SignIn';
 const Drawer = createDrawerNavigator();
 
-export default function MyDrawer(props) {
+export default function MyDrawer() {
   return (
     <Drawer.Navigator
       screenOptions={({navigation}) => ({

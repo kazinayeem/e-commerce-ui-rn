@@ -32,7 +32,19 @@
 		8C5BA782062C447E82B62A17 /* Montserrat-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA68CF7B221F40E6BA56A0E8 /* Montserrat-SemiBoldItalic.ttf */; };
 		8D9ED2EADDCF487AA3F07DD3 /* Montserrat-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3320339211D6407F9203E24F /* Montserrat-Thin.ttf */; };
 		0A79B026FAF84910939A66A5 /* Montserrat-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4D923E7237A455B8C9DE508 /* Montserrat-ThinItalic.ttf */; };
-		2640EBD1D45549B7A952321D /* fashion shop-rafiki 2.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B7DC245BB24CE78340543C /* fashion shop-rafiki 2.png */; };
+		81BD2625104B457A8A417DF6 /* banner.png in Resources */ = {isa = PBXBuildFile; fileRef = 729C7CD351164E0FB2523970 /* banner.png */; };
+		85462F0B750147E780926EF6 /* image1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C2064EABA0D400FAC4C5EA8 /* image1.png */; };
+		A4C1BA840AA44E8081CF2711 /* image2.png in Resources */ = {isa = PBXBuildFile; fileRef = C1F282059C6F40B58E66103D /* image2.png */; };
+		5C4781754C7C48D59A492ACD /* image3.png in Resources */ = {isa = PBXBuildFile; fileRef = CAEDC664EAD1433B92B11204 /* image3.png */; };
+		255B44937F1E4544AADC4423 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = CA83B86E07F744CAA71B0D95 /* logo.png */; };
+		D516731084A140E78DD430E7 /* mac.png in Resources */ = {isa = PBXBuildFile; fileRef = EF64B88578CC458EA39E5139 /* mac.png */; };
+		1B0B2D4A30B747DAA762675D /* sponsor.png in Resources */ = {isa = PBXBuildFile; fileRef = C6EC420836334D25934AB08C /* sponsor.png */; };
+		645AC95C660840078F9E16EC /* summer.png in Resources */ = {isa = PBXBuildFile; fileRef = E21E5647B1964BC0AED917A2 /* summer.png */; };
+		4A091A61257748549049008F /* banner2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C34847766924D5AB6C78886 /* banner2.png */; };
+		93EEB6A95D944D68B85A1B8E /* dealonphoto.png in Resources */ = {isa = PBXBuildFile; fileRef = F603999DA9254194AD6AECFA /* dealonphoto.png */; };
+		ED18799CF4BF482A8667E5A4 /* getstartimage.png in Resources */ = {isa = PBXBuildFile; fileRef = 509D4A1E204C49BA8DD5B6DC /* getstartimage.png */; };
+		E2C593FBD16F416D8B3C14E0 /* Group33769.png in Resources */ = {isa = PBXBuildFile; fileRef = 78422E105F2D479C81EC6ECC /* Group33769.png */; };
+		DBFA764647B749EAB0B5CF01 /* trandingproduct.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ED0D43072C34E69A5B914DC /* trandingproduct.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,7 +94,19 @@
 		DA68CF7B221F40E6BA56A0E8 /* Montserrat-SemiBoldItalic.ttf */ = {isa = PBXFileReference; name = "Montserrat-SemiBoldItalic.ttf"; path = "../assets/fonts/Montserrat-SemiBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		3320339211D6407F9203E24F /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; name = "Montserrat-Thin.ttf"; path = "../assets/fonts/Montserrat-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		A4D923E7237A455B8C9DE508 /* Montserrat-ThinItalic.ttf */ = {isa = PBXFileReference; name = "Montserrat-ThinItalic.ttf"; path = "../assets/fonts/Montserrat-ThinItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		F7B7DC245BB24CE78340543C /* fashion shop-rafiki 2.png */ = {isa = PBXFileReference; name = "fashion shop-rafiki 2.png"; path = "../assets/images/fashion shop-rafiki 2.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		729C7CD351164E0FB2523970 /* banner.png */ = {isa = PBXFileReference; name = "banner.png"; path = "../assets/images/banner.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4C2064EABA0D400FAC4C5EA8 /* image1.png */ = {isa = PBXFileReference; name = "image1.png"; path = "../assets/images/image1.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C1F282059C6F40B58E66103D /* image2.png */ = {isa = PBXFileReference; name = "image2.png"; path = "../assets/images/image2.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CAEDC664EAD1433B92B11204 /* image3.png */ = {isa = PBXFileReference; name = "image3.png"; path = "../assets/images/image3.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CA83B86E07F744CAA71B0D95 /* logo.png */ = {isa = PBXFileReference; name = "logo.png"; path = "../assets/images/logo.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		EF64B88578CC458EA39E5139 /* mac.png */ = {isa = PBXFileReference; name = "mac.png"; path = "../assets/images/mac.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C6EC420836334D25934AB08C /* sponsor.png */ = {isa = PBXFileReference; name = "sponsor.png"; path = "../assets/images/sponsor.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E21E5647B1964BC0AED917A2 /* summer.png */ = {isa = PBXFileReference; name = "summer.png"; path = "../assets/images/summer.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6C34847766924D5AB6C78886 /* banner2.png */ = {isa = PBXFileReference; name = "banner2.png"; path = "../assets/images/banner2.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F603999DA9254194AD6AECFA /* dealonphoto.png */ = {isa = PBXFileReference; name = "dealonphoto.png"; path = "../assets/images/dealonphoto.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		509D4A1E204C49BA8DD5B6DC /* getstartimage.png */ = {isa = PBXFileReference; name = "getstartimage.png"; path = "../assets/images/getstartimage.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		78422E105F2D479C81EC6ECC /* Group33769.png */ = {isa = PBXFileReference; name = "Group33769.png"; path = "../assets/images/Group33769.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1ED0D43072C34E69A5B914DC /* trandingproduct.png */ = {isa = PBXFileReference; name = "trandingproduct.png"; path = "../assets/images/trandingproduct.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,7 +234,19 @@
 				DA68CF7B221F40E6BA56A0E8 /* Montserrat-SemiBoldItalic.ttf */,
 				3320339211D6407F9203E24F /* Montserrat-Thin.ttf */,
 				A4D923E7237A455B8C9DE508 /* Montserrat-ThinItalic.ttf */,
-				F7B7DC245BB24CE78340543C /* fashion shop-rafiki 2.png */,
+				729C7CD351164E0FB2523970 /* banner.png */,
+				4C2064EABA0D400FAC4C5EA8 /* image1.png */,
+				C1F282059C6F40B58E66103D /* image2.png */,
+				CAEDC664EAD1433B92B11204 /* image3.png */,
+				CA83B86E07F744CAA71B0D95 /* logo.png */,
+				EF64B88578CC458EA39E5139 /* mac.png */,
+				C6EC420836334D25934AB08C /* sponsor.png */,
+				E21E5647B1964BC0AED917A2 /* summer.png */,
+				6C34847766924D5AB6C78886 /* banner2.png */,
+				F603999DA9254194AD6AECFA /* dealonphoto.png */,
+				509D4A1E204C49BA8DD5B6DC /* getstartimage.png */,
+				78422E105F2D479C81EC6ECC /* Group33769.png */,
+				1ED0D43072C34E69A5B914DC /* trandingproduct.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -329,7 +365,19 @@
 				8C5BA782062C447E82B62A17 /* Montserrat-SemiBoldItalic.ttf in Resources */,
 				8D9ED2EADDCF487AA3F07DD3 /* Montserrat-Thin.ttf in Resources */,
 				0A79B026FAF84910939A66A5 /* Montserrat-ThinItalic.ttf in Resources */,
-				2640EBD1D45549B7A952321D /* fashion shop-rafiki 2.png in Resources */,
+				81BD2625104B457A8A417DF6 /* banner.png in Resources */,
+				85462F0B750147E780926EF6 /* image1.png in Resources */,
+				A4C1BA840AA44E8081CF2711 /* image2.png in Resources */,
+				5C4781754C7C48D59A492ACD /* image3.png in Resources */,
+				255B44937F1E4544AADC4423 /* logo.png in Resources */,
+				D516731084A140E78DD430E7 /* mac.png in Resources */,
+				1B0B2D4A30B747DAA762675D /* sponsor.png in Resources */,
+				645AC95C660840078F9E16EC /* summer.png in Resources */,
+				4A091A61257748549049008F /* banner2.png in Resources */,
+				93EEB6A95D944D68B85A1B8E /* dealonphoto.png in Resources */,
+				ED18799CF4BF482A8667E5A4 /* getstartimage.png in Resources */,
+				E2C593FBD16F416D8B3C14E0 /* Group33769.png in Resources */,
+				DBFA764647B749EAB0B5CF01 /* trandingproduct.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
