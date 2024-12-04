@@ -7,7 +7,7 @@ import TrendingProducts from './TrendingProducts';
 
 const Stack = createNativeStackNavigator();
 
-export default function ProductNavigation() {
+export default function        ProductNavigation() {
   return (
     <Stack.Navigator
       screenOptions={{

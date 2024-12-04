@@ -15,15 +15,15 @@ const Tab = createBottomTabNavigator();
 function MyTabs() {
   return (
     <Tab.Navigator
-      initialRouteName="Page56"
+      initialRouteName="Product"
       screenOptions={{headerShown: false}}>
       <Tab.Screen
-        name="Page1"
+        name="Home"
         component={Product}
         options={{
           tabBarIcon: ({focused}) => {
             return (
-              <Icon
+              <Icon  
                 name={'home'}
                 size={24}
                 color={focused ? '#EB3030' : 'black'}
@@ -48,7 +48,7 @@ function MyTabs() {
         }}
       />
       <Tab.Screen
-        name="Page56"
+        name="Product"
         component={Product}
         options={{
           title: '',
@@ -76,7 +76,7 @@ function MyTabs() {
         }}
       />
       <Tab.Screen
-        name="Page26"
+        name="Search"
         component={SignIn}
         options={{
           tabBarIcon: ({focused}) => {
@@ -92,7 +92,7 @@ function MyTabs() {
       />
 
       <Tab.Screen
-        name="Page226"
+        name="Setting"
         component={SignIn}
         options={{
           tabBarIcon: ({focused}) => {

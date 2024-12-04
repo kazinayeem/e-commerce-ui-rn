@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unstable-nested-components */
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import React from 'react';
 import MyTabs from './Tab';
@@ -5,6 +6,7 @@ import {Alert, Image, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {Logo} from './config/Image';
 import SignIn from './screen/Auth/SignIn';
+import Profile from './screen/profile/Profile';
 const Drawer = createDrawerNavigator();
 
 export default function MyDrawer() {
@@ -38,12 +40,13 @@ export default function MyDrawer() {
         headerRight: () => (
           <TouchableOpacity
             style={{paddingHorizontal: 15}}
-            onPress={() => Alert.alert('Icon Pressed')}>
+            onPress={() => navigation.navigate('Profile')}>
             <Icon name={'user'} size={30} color={'#ffffwsw'} />
           </TouchableOpacity>
         ),
       })}>
       <Drawer.Screen name="Home" component={MyTabs} />
+      <Drawer.Screen name="Profile" component={Profile} />
       <Drawer.Screen name="Login" component={SignIn} />
     </Drawer.Navigator>
   );

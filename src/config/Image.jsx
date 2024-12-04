@@ -10,3 +10,5 @@ export const Tranding = require('../../assets/images/trandingproduct.png');
 export const Mac = require('../../assets/images/mac.png');
 export const Summer = require('../../assets/images/summer.png');
 export const Sponsor = require('../../assets/images/sponsor.png');
+export const GotoBtn = require('../../assets/images/gotocart.png');
+export const BuyBtn = require('../../assets/images/buynow.png');
