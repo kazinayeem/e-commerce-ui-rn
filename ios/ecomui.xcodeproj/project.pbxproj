@@ -45,6 +45,8 @@
 		ED18799CF4BF482A8667E5A4 /* getstartimage.png in Resources */ = {isa = PBXBuildFile; fileRef = 509D4A1E204C49BA8DD5B6DC /* getstartimage.png */; };
 		E2C593FBD16F416D8B3C14E0 /* Group33769.png in Resources */ = {isa = PBXBuildFile; fileRef = 78422E105F2D479C81EC6ECC /* Group33769.png */; };
 		DBFA764647B749EAB0B5CF01 /* trandingproduct.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ED0D43072C34E69A5B914DC /* trandingproduct.png */; };
+		64255CC746FD47F898283A71 /* buynow.png in Resources */ = {isa = PBXBuildFile; fileRef = B3224518719B48FE997F9D79 /* buynow.png */; };
+		0707F019CD824CDD9D88B97A /* gotocart.png in Resources */ = {isa = PBXBuildFile; fileRef = C3CF44A0E97D4F19BE28454E /* gotocart.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +109,8 @@
 		509D4A1E204C49BA8DD5B6DC /* getstartimage.png */ = {isa = PBXFileReference; name = "getstartimage.png"; path = "../assets/images/getstartimage.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		78422E105F2D479C81EC6ECC /* Group33769.png */ = {isa = PBXFileReference; name = "Group33769.png"; path = "../assets/images/Group33769.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		1ED0D43072C34E69A5B914DC /* trandingproduct.png */ = {isa = PBXFileReference; name = "trandingproduct.png"; path = "../assets/images/trandingproduct.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B3224518719B48FE997F9D79 /* buynow.png */ = {isa = PBXFileReference; name = "buynow.png"; path = "../assets/images/buynow.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C3CF44A0E97D4F19BE28454E /* gotocart.png */ = {isa = PBXFileReference; name = "gotocart.png"; path = "../assets/images/gotocart.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +251,8 @@
 				509D4A1E204C49BA8DD5B6DC /* getstartimage.png */,
 				78422E105F2D479C81EC6ECC /* Group33769.png */,
 				1ED0D43072C34E69A5B914DC /* trandingproduct.png */,
+				B3224518719B48FE997F9D79 /* buynow.png */,
+				C3CF44A0E97D4F19BE28454E /* gotocart.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -378,6 +384,8 @@
 				ED18799CF4BF482A8667E5A4 /* getstartimage.png in Resources */,
 				E2C593FBD16F416D8B3C14E0 /* Group33769.png in Resources */,
 				DBFA764647B749EAB0B5CF01 /* trandingproduct.png in Resources */,
+				64255CC746FD47F898283A71 /* buynow.png in Resources */,
+				0707F019CD824CDD9D88B97A /* gotocart.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -82,12 +82,20 @@
       "sha1": "b6f620d58b4fbafe82eb29497607ddb7204d143f"
     },
     {
+      "path": "assets/images/buynow.png",
+      "sha1": "d739d67c00d247e5dd8e860c2acedb013c466407"
+    },
+    {
       "path": "assets/images/dealonphoto.png",
       "sha1": "f21576c0d10626162bd4aea532ea3e0d7025bb3c"
     },
     {
       "path": "assets/images/getstartimage.png",
       "sha1": "ce8a9f6e42db67cd83e257bc5a60833c46081a80"
+    },
+    {
+      "path": "assets/images/gotocart.png",
+      "sha1": "03272272a72f282e8cf43bfb73e7dd594f1ad475"
     },
     {
       "path": "assets/images/Group33769.png",
