@@ -12,3 +12,5 @@ export const Summer = require('../../assets/images/summer.png');
 export const Sponsor = require('../../assets/images/sponsor.png');
 export const GotoBtn = require('../../assets/images/gotocart.png');
 export const BuyBtn = require('../../assets/images/buynow.png');
+export const profile = require('../../assets/images/groupprofile.png');
+export const loadingImage = require('../../assets/images/loading.png')

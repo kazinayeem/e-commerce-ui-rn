@@ -7,11 +7,13 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import {Logo} from './config/Image';
 import SignIn from './screen/Auth/SignIn';
 import Profile from './screen/profile/Profile';
+import CheckOut from './screen/profile/CheckOut';
 const Drawer = createDrawerNavigator();
 
 export default function MyDrawer() {
   return (
     <Drawer.Navigator
+      initialRouteName="MainPage"
       screenOptions={({navigation}) => ({
         headerStyle: {backgroundColor: '#F2F2F2'},
         headerShadowVisible: false,
@@ -46,8 +48,16 @@ export default function MyDrawer() {
         ),
       })}>
       <Drawer.Screen name="MainPage" component={MyTabs} />
-      <Drawer.Screen name="Profile" component={Profile} />
-      <Drawer.Screen name="Login" component={SignIn} />
+      <Drawer.Screen
+        name="Profile"
+        options={{headerShown: false}}
+        component={Profile}
+      />
+      <Drawer.Screen
+        name="CheckOut"
+        options={{headerShown: false}}
+        component={CheckOut}
+      />
     </Drawer.Navigator>
   );
 }

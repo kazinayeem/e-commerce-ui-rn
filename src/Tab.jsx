@@ -8,7 +8,7 @@ import Product from './screen/product/Product';
 import {View} from 'react-native';
 import ProductNavigation from './screen/product/Navigation';
 import SignIn from './screen/Auth/SignIn';
-import { BlackColor, navigationActiveColor } from './config/color';
+import {BlackColor, navigationActiveColor} from './config/color';
 
 const Tab = createBottomTabNavigator();
 
@@ -23,7 +23,7 @@ function MyTabs() {
         options={{
           tabBarIcon: ({focused}) => {
             return (
-              <Icon  
+              <Icon
                 name={'home'}
                 size={24}
                 color={focused ? navigationActiveColor : BlackColor}

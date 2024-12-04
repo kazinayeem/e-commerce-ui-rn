@@ -6,24 +6,12 @@
       "sha1": "ea4feb16f3d8cb3f1cbc8e3a7af7388cc01ce32e"
     },
     {
-      "path": "assets/fonts/Montserrat-BlackItalic.ttf",
-      "sha1": "d439bd54958ff80dc23d4d3edc5a5115a6e827a8"
-    },
-    {
       "path": "assets/fonts/Montserrat-Bold.ttf",
       "sha1": "c7d907722af4fb845ab97d515bb414f29651f000"
     },
     {
-      "path": "assets/fonts/Montserrat-BoldItalic.ttf",
-      "sha1": "eee7f440754eb6ecbfcc461e9af2536ed0286a7f"
-    },
-    {
       "path": "assets/fonts/Montserrat-ExtraBold.ttf",
       "sha1": "4a2cbee7a7ab79ab2cf0c120c962384dc240b237"
-    },
-    {
-      "path": "assets/fonts/Montserrat-ExtraBoldItalic.ttf",
-      "sha1": "f6ab908d898677add7044582e5a3e961317fe75f"
     },
     {
       "path": "assets/fonts/Montserrat-ExtraLight.ttf",
@@ -34,24 +22,12 @@
       "sha1": "a2fc69ceaf90f83fc899ee75190b3ef954e5e073"
     },
     {
-      "path": "assets/fonts/Montserrat-Italic.ttf",
-      "sha1": "763e9c22a750ff1241aacf1e0e4d3050827b9783"
-    },
-    {
       "path": "assets/fonts/Montserrat-Light.ttf",
       "sha1": "1db8878a7654208b6c55402f6ff717e03a312e1e"
     },
     {
-      "path": "assets/fonts/Montserrat-LightItalic.ttf",
-      "sha1": "91fcb7d72360f81be21a4b1fda01959d16179735"
-    },
-    {
       "path": "assets/fonts/Montserrat-Medium.ttf",
       "sha1": "4656e40419da86a5fec473ea8e7fc0efef183f05"
-    },
-    {
-      "path": "assets/fonts/Montserrat-MediumItalic.ttf",
-      "sha1": "95bcdfd1606d7b1970a12399d23ddf8fbeeb490e"
     },
     {
       "path": "assets/fonts/Montserrat-Regular.ttf",
@@ -62,16 +38,8 @@
       "sha1": "d491c9d0af61faef59ca807737b560170f547f5b"
     },
     {
-      "path": "assets/fonts/Montserrat-SemiBoldItalic.ttf",
-      "sha1": "d5b90fca448ac51e9410d7c8de07eb64be27ed25"
-    },
-    {
       "path": "assets/fonts/Montserrat-Thin.ttf",
       "sha1": "447838642258b95e8a61df1770189f962cc0741b"
-    },
-    {
-      "path": "assets/fonts/Montserrat-ThinItalic.ttf",
-      "sha1": "04f69417392da5f6f831fd89e6ff5698323fdecb"
     },
     {
       "path": "assets/images/banner.png",
@@ -102,6 +70,10 @@
       "sha1": "10d9d0e1969a7266d9d6819b35bf308ffc9b2a50"
     },
     {
+      "path": "assets/images/groupprofile.png",
+      "sha1": "16ebc73a6e22aee7f06322b413b613ddb1515e04"
+    },
+    {
       "path": "assets/images/image1.png",
       "sha1": "bbe47e920dddb666fce41635a88e9acb7afa0651"
     },
@@ -112,6 +84,10 @@
     {
       "path": "assets/images/image3.png",
       "sha1": "d25e86381c7b2b8655261cf4dde40cc4f23a6f47"
+    },
+    {
+      "path": "assets/images/loading.png",
+      "sha1": "db6387f73f4a46d2ceb25b751c2eecb3004fa57c"
     },
     {
       "path": "assets/images/logo.png",
