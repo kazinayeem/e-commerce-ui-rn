@@ -7,6 +7,8 @@ import {
 } from 'react-native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { BlackColor, bordercolor, btncolor, graycolor } from '../../config/color';
+import { ExtraBold } from '../../config/Font';
 
 const ForgotPassword = () => {
   return (
@@ -21,7 +23,7 @@ const ForgotPassword = () => {
           <TextInput
             style={styles.textInput}
             placeholder="Enter your email address"
-            placeholderTextColor="#8c8c8c"
+            placeholderTextColor={graycolor}
           />
         </View>
       </View>
@@ -53,14 +55,14 @@ const styles = StyleSheet.create({
   headerText: {
     fontSize: 36,
     fontWeight: '900',
-    fontFamily: 'Montserrat-ExtraBold',
+    fontFamily: ExtraBold,
   },
 
   textInputContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     borderWidth: 1,
-    borderColor: '#ccc',
+    borderColor: bordercolor,
     borderRadius: 8,
     paddingHorizontal: 10,
     marginBottom: 20,
@@ -71,7 +73,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 10,
     fontSize: 16,
-    color: '#000',
+    color: BlackColor,
   },
   RegisterText: {
     color: '#676767',
@@ -80,7 +82,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   loginButton: {
-    backgroundColor: '#ff5a5f',
+    backgroundColor: btncolor,
     paddingVertical: 15,
     borderRadius: 8,
     alignItems: 'center',
@@ -93,7 +95,7 @@ const styles = StyleSheet.create({
   },
   orText: {
     textAlign: 'center',
-    color: '#8c8c8c',
+    color: graycolor,
     marginBottom: 20,
   },
   socialContainer: {
@@ -103,7 +105,7 @@ const styles = StyleSheet.create({
   },
   socialButton: {
     borderWidth: 1,
-    borderColor: '#ccc',
+    borderColor: bordercolor,
     borderRadius: 50,
     padding: 10,
     alignItems: 'center',
@@ -121,13 +123,13 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   footerText: {
-    color: '#8c8c8c',
+    color: graycolor,
     fontSize: 14,
   },
   signUpText: {
     textDecorationLine: 'underline',
-    textDecorationColor: '#ff5a5f',
-    color: '#ff5a5f',
+    textDecorationColor: btncolor,
+    color: btncolor,
     fontSize: 14,
     fontWeight: 'bold',
   },

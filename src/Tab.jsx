@@ -6,9 +6,9 @@ import Icon2 from 'react-native-vector-icons/AntDesign';
 import React from 'react';
 import Product from './screen/product/Product';
 import {View} from 'react-native';
-import TrendingProducts from './screen/product/TrendingProducts';
 import ProductNavigation from './screen/product/Navigation';
 import SignIn from './screen/Auth/SignIn';
+import { BlackColor, navigationActiveColor } from './config/color';
 
 const Tab = createBottomTabNavigator();
 
@@ -26,7 +26,7 @@ function MyTabs() {
               <Icon  
                 name={'home'}
                 size={24}
-                color={focused ? '#EB3030' : 'black'}
+                color={focused ? navigationActiveColor : BlackColor}
               />
             );
           },
@@ -41,7 +41,7 @@ function MyTabs() {
               <Icon1
                 name={'favorite-border'}
                 size={24}
-                color={focused ? '#EB3030' : 'black'}
+                color={focused ? navigationActiveColor : BlackColor}
               />
             );
           },
@@ -68,7 +68,7 @@ function MyTabs() {
                 <Icon
                   name={'shopping-cart'}
                   size={24}
-                  color={focused ? '#EB3030' : 'black'}
+                  color={focused ? navigationActiveColor : BlackColor}
                 />
               </View>
             );
@@ -84,7 +84,7 @@ function MyTabs() {
               <Icon
                 name={'search'}
                 size={24}
-                color={focused ? '#EB3030' : 'black'}
+                color={focused ? navigationActiveColor : BlackColor}
               />
             );
           },
@@ -100,7 +100,7 @@ function MyTabs() {
               <Icon2
                 name={'setting'}
                 size={24}
-                color={focused ? '#EB3030' : 'black'}
+                color={focused ? navigationActiveColor : BlackColor}
               />
             );
           },

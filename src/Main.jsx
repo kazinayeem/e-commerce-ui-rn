@@ -18,7 +18,7 @@ function RootStack() {
       screenOptions={{
         headerShown: false,
       }}>
-      <Stack.Screen name="Home" component={Screen1} />
+      <Stack.Screen name="Home1" component={Screen1} />
       <Stack.Screen name="Home2" component={Screen2} />
       <Stack.Screen name="Home3" component={Screen3} />
       <Stack.Screen name="SignIn" component={SignIn} />

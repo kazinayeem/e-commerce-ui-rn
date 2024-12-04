@@ -9,6 +9,8 @@ import {
 import React from 'react';
 import {GetStartimage} from '../../config/Image';
 import {useNavigation} from '@react-navigation/native';
+import { btncolor, graycolor } from '../../config/color';
+import { ExtraBold } from '../../config/Font';
 
 const GetStarted = () => {
   const navigator = useNavigation();
@@ -29,7 +31,7 @@ const GetStarted = () => {
               textAlign: 'center',
               paddingHorizontal: 20,
               fontWeight: '900',
-              fontFamily: 'Montserrat-ExtraBold',
+              fontFamily: ExtraBold,
             }}>
             You want Authentic, here you go!
           </Text>
@@ -72,11 +74,11 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
   },
   footerText: {
-    color: '#8c8c8c',
+    color: graycolor,
     fontSize: 14,
   },
   loginButton: {
-    backgroundColor: '#ff5a5f',
+    backgroundColor: btncolor,
     paddingVertical: 15,
     borderRadius: 8,
     width: '85%',

@@ -9,6 +9,7 @@ import {
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import {StarRatingDisplay} from 'react-native-star-rating-widget';
+import { Light, Medium, Regular } from '../../config/Font';
 const Item = ({item, star}) => (
   <TouchableOpacity
     style={{
@@ -30,7 +31,7 @@ const Item = ({item, star}) => (
     <Text
       style={{
         fontSize: 12,
-        fontFamily: 'Montserrat-Medium',
+        fontFamily: Medium,
 
         alignSelf: 'flex-start',
       }}>
@@ -39,7 +40,7 @@ const Item = ({item, star}) => (
     <Text
       style={{
         fontSize: 10,
-        fontFamily: 'Montserrat-Medium',
+        fontFamily: Medium,
 
         alignSelf: 'flex-start',
       }}>
@@ -48,7 +49,7 @@ const Item = ({item, star}) => (
     <Text
       style={{
         fontSize: 12,
-        fontFamily: 'Montserrat-Medium',
+        fontFamily: Medium,
 
         alignSelf: 'flex-start',
       }}>
@@ -64,7 +65,7 @@ const Item = ({item, star}) => (
       <Text
         style={{
           fontSize: 12,
-          fontFamily: 'Montserrat-Light',
+          fontFamily: Light,
           textDecorationLine: 'line-through',
           alignSelf: 'flex-start',
           color: '#BBBBBB',
@@ -74,7 +75,7 @@ const Item = ({item, star}) => (
       <Text
         style={{
           fontSize: 10,
-          fontFamily: 'Montserrat-Regular',
+          fontFamily: Regular,
           color: '#FE735C',
         }}>
         {Math.round(Math.random() * 100)} %Off

@@ -1,8 +1,10 @@
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import {BlackColor} from '../../config/color';
+import { Light, SemiBold } from '../../config/Font';
 
-const All_Featured = (props) => {
+const All_Featured = props => {
   return (
     <View style={styles.container}>
       <View style={styles.maintextcontainer}>
@@ -12,12 +14,12 @@ const All_Featured = (props) => {
       <View style={styles.btnContainer}>
         <TouchableOpacity style={styles.btn}>
           <Text style={styles.btntext}>Sort</Text>
-          <Icon name="sort" size={20} color="black" />
+          <Icon name="sort" size={20} color={BlackColor} />
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.btn}>
           <Text style={styles.btntext}>Filter</Text>
-          <Icon name="filter" size={20} color="black" />
+          <Icon name="filter" size={20} color={BlackColor} />
         </TouchableOpacity>
       </View>
     </View>
@@ -53,15 +55,15 @@ const styles = StyleSheet.create({
 
   btntext: {
     fontSize: 14,
-    fontFamily: 'Montserrat-Light',
+    fontFamily: Light,
     fontWeight: '200',
-    color: 'black',
+    color: BlackColor,
   },
   maintext: {
     fontSize: 18,
-    fontFamily: 'Montserrat-SemiBold',
+    fontFamily: SemiBold,
     fontWeight: '500',
-    color: 'black',
+    color: BlackColor,
   },
   maintextcontainer: {
     alignItems: 'center',

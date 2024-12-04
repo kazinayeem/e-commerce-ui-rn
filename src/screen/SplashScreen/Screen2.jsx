@@ -3,6 +3,8 @@ import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import {Image3} from '../../config/Image';
 import {useNavigation} from '@react-navigation/native';
+import { BlackColor, bordercolor, nextbtncolor, titlecolor } from '../../config/color';
+import { ExtraBold, SemiBold } from '../../config/Font';
 
 const Screen2 = () => {
   const navigation = useNavigation();
@@ -33,7 +35,7 @@ const Screen2 = () => {
       </View>
 
       <View style={styles.footer}>
-        <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Home1')}>
           <Text style={styles.prevText}>Prev</Text>
         </TouchableOpacity>
         <View style={styles.dotdotContainer}>
@@ -79,21 +81,21 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 24,
     fontWeight: '900',
-    fontFamily: 'Montserrat-ExtraBold',
+    fontFamily: ExtraBold,
   },
   subtitle: {
     textAlign: 'center',
     padding: 10,
-    color: '#A8A8A9',
+    color: titlecolor,
     fontSize: 14,
     fontWeight: 'medium',
-    fontFamily: 'Montserrat-SemiBold',
+    fontFamily: SemiBold,
   },
 
   HeaderText: {
     fontSize: 18,
     fontWeight: 600,
-    fontFamily: 'Montserrat-SemiBold',
+    fontFamily: SemiBold,
   },
   footer: {
     flex: 10,
@@ -111,25 +113,25 @@ const styles = StyleSheet.create({
   nextbtntext: {
     fontSize: 18,
     fontWeight: 600,
-    fontFamily: 'Montserrat-SemiBold',
-    color: '#F83758',
+    fontFamily: SemiBold,
+    color: nextbtncolor,
   },
   dot: {
     width: 10,
     height: 10,
     borderRadius: 5,
-    backgroundColor: '#ccc',
+    backgroundColor: bordercolor,
     marginHorizontal: 6,
   },
   activeDot: {
     width: 40,
-    color: 'black',
-    backgroundColor: 'black',
+    color: BlackColor,
+    backgroundColor: BlackColor,
   },
   prevText: {
     fontSize: 18,
     fontWeight: 600,
-    fontFamily: 'Montserrat-SemiBold',
-    color: '#ccc',
+    fontFamily: SemiBold,
+    color: bordercolor,
   },
 });

@@ -12,6 +12,7 @@ import SearchBar from './SearchBar';
 import All_Featured from './All-Featured';
 import axios from 'axios';
 import {useNavigation} from '@react-navigation/native';
+import { Medium, Regular } from '../../config/Font';
 
 const Item = ({item, navigation}) => {
   return (
@@ -38,7 +39,7 @@ const Item = ({item, navigation}) => {
         <Text
           style={{
             fontSize: 16,
-            fontFamily: 'Montserrat-Medium',
+            fontFamily: Medium,
             fontWeight: '700',
           }}>
           {item.title.substring(0, 15)}......
@@ -46,7 +47,7 @@ const Item = ({item, navigation}) => {
         <Text
           style={{
             fontSize: 10,
-            fontFamily: 'Montserrat-Regular',
+            fontFamily: Regular,
             fontWeight: '700',
           }}>
           {item.description.substring(0, 40)}.....

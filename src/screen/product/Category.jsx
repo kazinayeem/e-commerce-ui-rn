@@ -1,6 +1,7 @@
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import {FlatList} from 'react-native-gesture-handler';
+import { Regular } from '../../config/Font';
 
 const Item = ({title, url}) => (
   <TouchableOpacity style={styles.item}>
@@ -43,6 +44,6 @@ const styles = StyleSheet.create({
   text: {
     color: '#21003D',
     fontSize: 10,
-    fontFamily: 'Montserrat-Regular',
+    fontFamily: Regular,
   },
 });

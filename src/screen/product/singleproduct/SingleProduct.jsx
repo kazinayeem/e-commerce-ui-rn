@@ -15,6 +15,7 @@ import {StarRatingDisplay} from 'react-native-star-rating-widget';
 import {BuyBtn, GotoBtn} from '../../../config/Image';
 import All_Featured from '../All-Featured';
 import ProductShow from '../ProductShow';
+import { Bold, Regular, SemiBold, Thin } from '../../../config/Font';
 
 const width = Dimensions.get('window').width;
 const SingleProduct = props => {
@@ -74,7 +75,7 @@ const SingleProduct = props => {
               </TouchableOpacity>
             </View>
             <Text style={styles.title}>{product?.title}</Text>
-            <Text style={{fontFamily: 'Montserrat-Regular'}}>
+            <Text style={{fontFamily: Regular}}>
               Vision Alta Men’s Shoes Size (All Colours)
             </Text>
 
@@ -98,14 +99,14 @@ const SingleProduct = props => {
                   fontSize: 14,
                   color: '#808488',
                   textDecorationLine: 'line-through',
-                  fontFamily: 'Montserrat-Thin',
+                  fontFamily: Thin,
                 }}>
                 ${product?.price + 200}
               </Text>
               <Text
                 style={{
                   fontSize: 15,
-                  fontFamily: 'Montserrat-Regular',
+                  fontFamily: Regular,
                 }}>
                 ${product?.price}
               </Text>
@@ -113,7 +114,7 @@ const SingleProduct = props => {
                 style={{
                   color: '#FA7189',
                   fontSize: 15,
-                  fontFamily: 'Montserrat-Bold',
+                  fontFamily: Bold,
                 }}>
                 {Math.round(Math.random() * 50)}% Off
               </Text>
@@ -146,7 +147,7 @@ const SingleProduct = props => {
               style={{
                 textAlign: 'left',
                 fontSize: 25,
-                fontFamily: 'Montserrat-Bold',
+                fontFamily: Bold,
               }}>
               1 within Hour
             </Text>
@@ -220,7 +221,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#FA7189',
     fontSize: 14,
-    fontFamily: 'Montserrat-SemiBold',
+    fontFamily: SemiBold,
   },
 
   btntextactive: {

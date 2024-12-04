@@ -45,7 +45,7 @@ export default function MyDrawer() {
           </TouchableOpacity>
         ),
       })}>
-      <Drawer.Screen name="Home" component={MyTabs} />
+      <Drawer.Screen name="MainPage" component={MyTabs} />
       <Drawer.Screen name="Profile" component={Profile} />
       <Drawer.Screen name="Login" component={SignIn} />
     </Drawer.Navigator>
