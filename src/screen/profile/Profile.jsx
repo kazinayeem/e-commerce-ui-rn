@@ -14,6 +14,10 @@ import {BlackColor, nextbtncolor, whiteColor} from '../../config/color';
 import {useNavigation} from '@react-navigation/native';
 import Header from './Header';
 import {profile} from '../../config/Image';
+import {
+  responsiveHeight,
+  responsiveWidth,
+} from 'react-native-responsive-dimensions';
 const Profile = () => {
   const navigation = useNavigation();
   return (
@@ -24,8 +28,8 @@ const Profile = () => {
         showsHorizontalScrollIndicator={false}>
         <Image
           source={profile}
-          width={103}
-          height={98}
+          width={responsiveWidth(25)}
+          height={responsiveHeight(25)}
           resizeMode="cover"
           style={{alignSelf: 'center'}}
         />

@@ -8,19 +8,29 @@ import {
 } from 'react-native';
 import {GetStartimage} from '../../config/Image';
 import {useNavigation} from '@react-navigation/native';
-import {btncolor, graycolor} from '../../config/color';
+import {btncolor} from '../../config/color';
 import {ExtraBold} from '../../config/Font';
+import {
+  responsiveFontSize,
+  responsiveHeight,
+  responsiveWidth,
+} from 'react-native-responsive-dimensions';
 
 const GetStarted = () => {
   const navigation = useNavigation();
 
   return (
     <View style={styles.container}>
-      <ImageBackground source={GetStartimage} resizeMode="cover" style={styles.image}>
+      <ImageBackground
+        source={GetStartimage}
+        resizeMode="cover"
+        style={styles.image}>
         <View style={styles.footer}>
           <Text style={styles.titleText}>You want Authentic, here you go!</Text>
           <Text style={styles.subtitleText}>Find it here, buy it now!</Text>
-          <TouchableOpacity style={styles.loginButton} onPress={() => navigation.navigate('MyDrawer')}>
+          <TouchableOpacity
+            style={styles.loginButton}
+            onPress={() => navigation.navigate('MyDrawer')}>
             <Text style={styles.loginButtonText}>Get Started</Text>
           </TouchableOpacity>
         </View>
@@ -35,40 +45,43 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+    width: responsiveWidth(100),
+    height: responsiveHeight(100),
   },
   image: {
-    flex: 1,
+    width: responsiveWidth(100),
     justifyContent: 'flex-end',
+    height: responsiveHeight(100),
   },
   footer: {
-    paddingHorizontal: 20,
-    paddingBottom: 60,
+    paddingHorizontal: responsiveWidth(2),
+    paddingBottom: responsiveHeight(8),
     alignItems: 'center',
   },
   titleText: {
-    fontSize: 35,
+    fontSize: responsiveFontSize(5),
     color: '#fff',
     textAlign: 'center',
     fontFamily: ExtraBold,
     fontWeight: '900',
-    marginBottom: 10,
+    marginBottom: responsiveWidth(2.2),
   },
   subtitleText: {
-    fontSize: 14,
+    fontSize: responsiveFontSize(2),
     color: '#fff',
     textAlign: 'center',
-    marginBottom: 30,
+    marginBottom: responsiveWidth(5),
   },
   loginButton: {
     backgroundColor: btncolor,
-    paddingVertical: 15,
+    paddingVertical: responsiveHeight(2.8),
     borderRadius: 8,
-    width: '85%',
+    width: responsiveWidth(85),
     alignItems: 'center',
   },
   loginButtonText: {
     color: '#fff',
-    fontSize: 18,
+    fontSize: responsiveFontSize(2.5),
     fontWeight: 'bold',
   },
 });
