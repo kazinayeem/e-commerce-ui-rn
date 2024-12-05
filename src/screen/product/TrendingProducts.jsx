@@ -1,7 +1,6 @@
 import {
   FlatList,
   Image,
-  StyleSheet,
   Text,
   TouchableOpacity,
   View,
@@ -12,18 +11,23 @@ import SearchBar from './SearchBar';
 import All_Featured from './All-Featured';
 import axios from 'axios';
 import {useNavigation} from '@react-navigation/native';
-import { Medium, Regular } from '../../config/Font';
+import {Medium, Regular} from '../../config/Font';
+import {
+  responsiveFontSize,
+  responsiveHeight,
+  responsiveWidth,
+} from 'react-native-responsive-dimensions';
 
 const Item = ({item, navigation}) => {
   return (
     <View
       style={{
-        width: '48%',
+        width: responsiveWidth(48),
         borderRadius: 10,
         backgroundColor: 'white',
-        marginBottom: 5,
-        height: 310,
-        margin: 3,
+        marginBottom: responsiveHeight(1),
+        height: responsiveHeight(40),
+        marginHorizontal: responsiveWidth(1),
       }}>
       <Image
         style={{borderRadius: 10, alignSelf: 'center'}}
@@ -35,22 +39,22 @@ const Item = ({item, navigation}) => {
       />
       <TouchableOpacity
         onPress={() => navigation.navigate('SingleProduct', {id: item.id})}
-        style={{paddingHorizontal: 5}}>
+        style={{paddingHorizontal: responsiveWidth(2)}}>
         <Text
           style={{
-            fontSize: 16,
+            fontSize: responsiveFontSize(2.1),
             fontFamily: Medium,
             fontWeight: '700',
           }}>
-          {item.title.substring(0, 15)}......
+          {item.title.substring(0, 15)}..
         </Text>
         <Text
           style={{
-            fontSize: 10,
+            fontSize: responsiveFontSize(1.2),
             fontFamily: Regular,
             fontWeight: '700',
           }}>
-          {item.description.substring(0, 40)}.....
+          {item.description.substring(0, 40)}
         </Text>
         <Text>₹{item.price}</Text>
       </TouchableOpacity>
@@ -64,12 +68,13 @@ const TrendingProducts = () => {
 
   useEffect(() => {
     axios
-      .get('https://api.escuelajs.co/api/v1/products')
-      .then(res => setproduct(res.data))
+      .get('https://dummyjson.com/products')
+      .then(res => setproduct(res.data.products))
       .catch(e => {
         console.log(e);
       });
   }, []);
+  
   return (
     <View>
       <SearchBar />
@@ -95,5 +100,3 @@ const TrendingProducts = () => {
 };
 
 export default TrendingProducts;
-
-const styles = StyleSheet.create({});

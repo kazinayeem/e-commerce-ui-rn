@@ -1,30 +1,31 @@
-import {
-  Image,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import Header from './Header';
 import {useNavigation} from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/EvilIcons';
 import Icon1 from 'react-native-vector-icons/FontAwesome';
-import {Medium, SemiBold} from '../../config/Font';
-import {StarRatingDisplay} from 'react-native-star-rating-widget';
-import {navigationActiveColor, titlecolor} from '../../config/color';
+import {Regular, SemiBold} from '../../config/Font';
+
 import CartProduct from './CartProduct';
+import {
+  responsiveFontSize,
+  responsiveScreenFontSize,
+  responsiveScreenWidth,
+} from 'react-native-responsive-dimensions';
 const CheckOut = () => {
   const navigation = useNavigation();
   return (
-    <View style={{width: '100%', paddingHorizontal: 10}}>
+    <View
+      style={{
+        width: responsiveScreenWidth(100),
+        paddingHorizontal: responsiveScreenWidth(2),
+      }}>
       <Header title="CheckOut" navigation={navigation} />
       <View>
         <View
           style={{flexDirection: 'row', alignItems: 'center', width: '99%'}}>
-          <Icon name="location" size={20} />
-          <Text style={{fontSize: 14, fontFamily: SemiBold}}>
+          <Icon name="location" size={responsiveFontSize(2)} />
+          <Text style={{fontSize: responsiveFontSize(2), fontFamily: SemiBold}}>
             Delivery Address
           </Text>
         </View>
@@ -33,7 +34,7 @@ const CheckOut = () => {
           style={{width: '100%', flexDirection: 'row', marginTop: 15, gap: 5}}>
           <View
             style={{
-              width: '78%',
+              width: responsiveScreenWidth(78),
               borderColor: '#e0e0e0',
               shadowColor: '#000',
               backgroundColor: 'white',
@@ -44,16 +45,26 @@ const CheckOut = () => {
             }}>
             <View
               style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-              <Text>Address</Text>
-              <Icon1 name="edit" size={20} />
+              <Text
+                style={{
+                  fontSize: responsiveFontSize(1.8),
+                  fontFamily: SemiBold,
+                }}>
+                Address
+              </Text>
+              <Icon1 name="edit" size={responsiveFontSize(2)} />
             </View>
-            <Text>
+            <Text
+              style={{
+                fontSize: responsiveFontSize(1.5),
+                fontFamily: Regular,
+              }}>
               216 St Paul's Rd, London N1 2LL, UK Contact : +44-784232
             </Text>
           </View>
           <View
             style={{
-              width: '20%',
+              width: responsiveScreenWidth(18),
               justifyContent: 'center',
               alignItems: 'center',
               borderColor: '#e0e0e0',
@@ -63,12 +74,15 @@ const CheckOut = () => {
               padding: 10,
               borderRadius: 2,
             }}>
-            <Icon1 name="plus" size={20} />
+            <Icon1 name="plus" size={responsiveFontSize(3.5)} />
           </View>
         </View>
 
         {/* shopping list */}
-        <Text style={{fontFamily: SemiBold, fontSize: 15}}>Shopping List</Text>
+        <Text
+          style={{fontFamily: SemiBold, fontSize: responsiveScreenFontSize(2)}}>
+          Shopping List
+        </Text>
         <ScrollView
           showsVerticalScrollIndicator={false}
           showsHorizontalScrollIndicator={false}
@@ -78,6 +92,15 @@ const CheckOut = () => {
           <CartProduct imagelink="https://mensworld.com.bd/wp-content/uploads/2024/01/3205.jpg" />
           <CartProduct imagelink="https://www.rei.com/media/17f611ed-0d2c-438f-b8a0-892e86dc489f.jpg" />
           <CartProduct imagelink="https://xcdn.next.co.uk/Common/Items/Default/Default/ItemImages/SearchAlt/224x336/578691.jpg" />
+
+          <View
+            style={{
+              width: '100%',
+              height: 1,
+              backgroundColor: '#BBBBBB',
+              marginTop: 400,
+            }}
+          />
         </ScrollView>
       </View>
     </View>

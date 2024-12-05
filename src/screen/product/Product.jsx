@@ -1,5 +1,5 @@
 import {Image, ScrollView, View} from 'react-native';
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import SearchBar from './SearchBar';
 import All_Featured from './All-Featured';
 import DealOnTime from './DealOnTime';
@@ -7,14 +7,16 @@ import Category from './Category';
 import {data} from './porducturl';
 import ProductShow from './ProductShow';
 import {Banner2, Mac, Sponsor, Summer, Tranding} from '../../config/Image';
+import {responsiveWidth} from 'react-native-responsive-dimensions';
 
 const Product = () => {
-  
-  useEffect(() => {}, []);
   return (
-    <View style={{flex: 1}}>
+    <View style={{width: responsiveWidth(100)}}>
       <SearchBar />
-      <ScrollView>
+      <ScrollView
+        showsHorizontalScrollIndicator={false}
+        showsVerticalScrollIndicator={false}
+        style={{width: responsiveWidth(100)}}>
         <All_Featured title={'All Featured'} />
         <Category data={data} />
         <DealOnTime />
@@ -22,7 +24,7 @@ const Product = () => {
         <Image
           source={Banner2}
           height={'auto'}
-          width={'100%'}
+          width={responsiveWidth(100)}
           resizeMethod="auto"
           resizeMode="cover"
           style={{alignSelf: 'center', marginTop: 20}}
@@ -30,7 +32,7 @@ const Product = () => {
         <Image
           source={Mac}
           height={'auto'}
-          width={'100%'}
+          width={responsiveWidth(100)}
           resizeMethod="auto"
           resizeMode="cover"
           style={{alignSelf: 'center', marginTop: 20}}

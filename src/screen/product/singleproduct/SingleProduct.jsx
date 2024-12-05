@@ -15,15 +15,22 @@ import {StarRatingDisplay} from 'react-native-star-rating-widget';
 import {BuyBtn, GotoBtn} from '../../../config/Image';
 import All_Featured from '../All-Featured';
 import ProductShow from '../ProductShow';
-import { Bold, Regular, SemiBold, Thin } from '../../../config/Font';
+import {Bold, Regular, SemiBold, Thin} from '../../../config/Font';
+import {
+  responsiveFontSize,
+  responsiveHeight,
+  responsiveWidth,
+} from 'react-native-responsive-dimensions';
 
 const width = Dimensions.get('window').width;
+
 const SingleProduct = props => {
-  const [product, setproduct] = useState(null);
+  const [product, setProduct] = useState(null);
+
   useEffect(() => {
     axios
-      .get(`https://api.escuelajs.co/api/v1/products/${props.route.params.id}`)
-      .then(res => setproduct(res.data))
+      .get(`https://dummyjson.com/products/${props.route.params.id}`)
+      .then(res => setProduct(res.data))
       .catch(e => {
         console.log(e);
       });
@@ -42,7 +49,7 @@ const SingleProduct = props => {
         <ScrollView>
           <Carousel
             width={width}
-            height={width / 2}
+            height={width / 1.5} // Updated to make the carousel a bit taller for better aspect ratio
             autoPlay={true}
             data={product.images}
             scrollAnimationDuration={2000}
@@ -57,31 +64,30 @@ const SingleProduct = props => {
           <View style={styles.detailsContainer}>
             <Text style={styles.title}>Size : 7UK</Text>
 
-            <View style={styles.sizebtncotainer}>
-              <TouchableOpacity style={styles.sizebtn}>
-                <Text style={styles.btntext}>6UK</Text>
-              </TouchableOpacity>
-              <TouchableOpacity style={[styles.sizebtn, styles.btnactivecolor]}>
-                <Text style={[styles.btntext, styles.btntextactive]}>7UK</Text>
-              </TouchableOpacity>
-              <TouchableOpacity style={styles.sizebtn}>
-                <Text style={styles.btntext}>8UK</Text>
-              </TouchableOpacity>
-              <TouchableOpacity style={styles.sizebtn}>
-                <Text style={styles.btntext}>9UK</Text>
-              </TouchableOpacity>
-              <TouchableOpacity style={styles.sizebtn}>
-                <Text style={styles.btntext}>10UK</Text>
-              </TouchableOpacity>
+            <View style={styles.sizebtnContainer}>
+              {[6, 7, 8, 9, 10].map(size => (
+                <TouchableOpacity
+                  key={size}
+                  style={[styles.sizebtn, size === 7 && styles.btnActiveColor]}>
+                  <Text
+                    style={[
+                      styles.btnText,
+                      size === 7 && styles.btnTextActive,
+                    ]}>
+                    {size}UK
+                  </Text>
+                </TouchableOpacity>
+              ))}
             </View>
+
             <Text style={styles.title}>{product?.title}</Text>
             <Text style={{fontFamily: Regular}}>
               Vision Alta Men’s Shoes Size (All Colours)
             </Text>
 
-            <View style={styles.startcontainer}>
+            <View style={styles.starContainer}>
               <StarRatingDisplay
-                rating={Math.round(Math.random() * 5)}
+                rating={product.rating || 0} // Using actual rating from API
                 maxStars={5}
                 starSize={20}
                 emptyColor="#A4A9B3"
@@ -89,11 +95,11 @@ const SingleProduct = props => {
               />
               <Text
                 style={{color: '#A4A9B3', fontSize: 17, paddingHorizontal: 10}}>
-                {Math.round(Math.random() * 50000)}+
+                {product.rating?.count || 0}+ reviews
               </Text>
             </View>
 
-            <View style={styles.pricecontainer}>
+            <View style={styles.priceContainer}>
               <Text
                 style={{
                   fontSize: 14,
@@ -119,29 +125,24 @@ const SingleProduct = props => {
                 {Math.round(Math.random() * 50)}% Off
               </Text>
             </View>
+
             <Text style={styles.description}>Product Details</Text>
             <Text style={styles.description}>{product?.description}</Text>
           </View>
 
-          <View style={styles.btnsection}>
-            <TouchableOpacity>
+          <View style={styles.btnSection}>
+            <TouchableOpacity accessibilityLabel="Buy Now">
               <Image source={BuyBtn} />
             </TouchableOpacity>
 
-            <TouchableOpacity>
+            <TouchableOpacity accessibilityLabel="Go to Product Page">
               <Image source={GotoBtn} />
             </TouchableOpacity>
           </View>
 
           <TouchableOpacity
-            style={{
-              backgroundColor: '#FFCCD5',
-              width: '95%',
-              alignSelf: 'center',
-              paddingLeft: 20,
-              borderRadius: 10,
-              marginTop: 10,
-            }}>
+            style={styles.deliveryInfo}
+            accessibilityLabel="Delivery Info">
             <Text style={{textAlign: 'left', fontSize: 22}}>Delivery in </Text>
             <Text
               style={{
@@ -149,7 +150,7 @@ const SingleProduct = props => {
                 fontSize: 25,
                 fontFamily: Bold,
               }}>
-              1 within Hour
+              1 Hour
             </Text>
           </TouchableOpacity>
 
@@ -167,7 +168,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    width: '100%',
+    width: responsiveWidth(100),
   },
   loaderContainer: {
     flex: 1,
@@ -179,71 +180,69 @@ const styles = StyleSheet.create({
     height: '100%',
     resizeMode: 'cover',
     alignSelf: 'center',
-
     borderRadius: 10,
   },
   detailsContainer: {
     padding: 16,
   },
   title: {
-    fontSize: 18,
+    fontSize: responsiveFontSize(2),
     fontWeight: 'bold',
     marginBottom: 8,
   },
   description: {
-    fontSize: 14,
+    fontSize: responsiveFontSize(1.6),
     color: '#666',
     marginBottom: 8,
   },
-  price: {
-    fontSize: 16,
-    fontWeight: 'bold',
-    color: '#333',
-  },
-  sizebtncotainer: {
-    flexDirection: 'row',
-    width: '95%',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-  },
-
-  sizebtn: {
-    borderColor: '#FA7189',
-    width: '50',
-    height: '35',
-    borderWidth: 2,
-    borderRadius: 8,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-
-  btntext: {
-    textAlign: 'center',
-    color: '#FA7189',
-    fontSize: 14,
-    fontFamily: SemiBold,
-  },
-
-  btntextactive: {
-    color: '#fff',
-  },
-  btnactivecolor: {
-    backgroundColor: '#FA7189',
-  },
-  startcontainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  pricecontainer: {
+  priceContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     width: '95%',
     columnGap: 10,
   },
-
-  btnsection: {
+  sizebtnContainer: {
+    flexDirection: 'row',
+    width: '95%',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  sizebtn: {
+    borderColor: '#FA7189',
+    width: responsiveWidth(12),
+    height: responsiveHeight(4),
+    borderWidth: responsiveWidth(0.3),
+    borderRadius: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  btnText: {
+    textAlign: 'center',
+    color: '#FA7189',
+    fontSize: responsiveFontSize(1.8),
+    fontFamily: SemiBold,
+  },
+  btnTextActive: {
+    color: '#fff',
+  },
+  btnActiveColor: {
+    backgroundColor: '#FA7189',
+  },
+  starContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  btnSection: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-around',
+  },
+  deliveryInfo: {
+    backgroundColor: '#FFCCD5',
+    width: '95%',
+    alignSelf: 'center',
+    paddingLeft: 20,
+    borderRadius: 10,
+    marginTop: 10,
   },
 });

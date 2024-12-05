@@ -1,4 +1,4 @@
-/* eslint-disable react-native/no-inline-styles */
+import React from 'react';
 import {
   View,
   Text,
@@ -6,49 +6,21 @@ import {
   ImageBackground,
   TouchableOpacity,
 } from 'react-native';
-import React from 'react';
 import {GetStartimage} from '../../config/Image';
 import {useNavigation} from '@react-navigation/native';
-import { btncolor, graycolor } from '../../config/color';
-import { ExtraBold } from '../../config/Font';
+import {btncolor, graycolor} from '../../config/color';
+import {ExtraBold} from '../../config/Font';
 
 const GetStarted = () => {
-  const navigator = useNavigation();
+  const navigation = useNavigation();
 
   return (
     <View style={styles.container}>
-      <ImageBackground
-        source={GetStartimage}
-        resizeMode="cover"
-        style={styles.image}>
+      <ImageBackground source={GetStartimage} resizeMode="cover" style={styles.image}>
         <View style={styles.footer}>
-          <Text
-            style={{
-              fontSize: 35,
-              color: '#fff',
-              width: '80%',
-              alignSelf: 'center',
-              textAlign: 'center',
-              paddingHorizontal: 20,
-              fontWeight: '900',
-              fontFamily: ExtraBold,
-            }}>
-            You want Authentic, here you go!
-          </Text>
-          <Text
-            style={{
-              fontSize: 14,
-              color: '#fff',
-              width: '80%',
-              alignSelf: 'center',
-              textAlign: 'center',
-              paddingBottom: 60,
-            }}>
-            Find it here, buy it now!
-          </Text>
-          <TouchableOpacity
-            style={styles.loginButton}
-            onPress={() => navigator.navigate('MyDrawer')}>
+          <Text style={styles.titleText}>You want Authentic, here you go!</Text>
+          <Text style={styles.subtitleText}>Find it here, buy it now!</Text>
+          <TouchableOpacity style={styles.loginButton} onPress={() => navigation.navigate('MyDrawer')}>
             <Text style={styles.loginButtonText}>Get Started</Text>
           </TouchableOpacity>
         </View>
@@ -66,25 +38,33 @@ const styles = StyleSheet.create({
   },
   image: {
     flex: 1,
-    opacity: 0.9,
     justifyContent: 'flex-end',
   },
   footer: {
-    flexDirection: 'column',
-    justifyContent: 'flex-end',
+    paddingHorizontal: 20,
+    paddingBottom: 60,
+    alignItems: 'center',
   },
-  footerText: {
-    color: graycolor,
+  titleText: {
+    fontSize: 35,
+    color: '#fff',
+    textAlign: 'center',
+    fontFamily: ExtraBold,
+    fontWeight: '900',
+    marginBottom: 10,
+  },
+  subtitleText: {
     fontSize: 14,
+    color: '#fff',
+    textAlign: 'center',
+    marginBottom: 30,
   },
   loginButton: {
     backgroundColor: btncolor,
     paddingVertical: 15,
     borderRadius: 8,
     width: '85%',
-    alignSelf: 'center',
     alignItems: 'center',
-    marginBottom: 20,
   },
   loginButtonText: {
     color: '#fff',

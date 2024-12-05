@@ -1,9 +1,10 @@
-import {View, Text, StyleSheet, TextInput} from 'react-native';
 import React from 'react';
+import {View, TextInput, StyleSheet} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+
 const SearchBar = () => {
   return (
-    <View>
+    <View style={styles.container}>
       <View style={styles.textInputContainer}>
         <Icon name="search" size={20} color="#BBBBBB" />
         <TextInput
@@ -20,20 +21,28 @@ const SearchBar = () => {
 export default SearchBar;
 
 const styles = StyleSheet.create({
+  container: {
+    marginVertical: 10,
+    width: '100%',
+    alignItems: 'center',
+  },
   textInputContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     borderRadius: 8,
     paddingHorizontal: 10,
-    backgroundColor: '#FFFF',
+    backgroundColor: '#FFFFFF',
     height: 50,
-    elevation: 1,
+    elevation: 2,
+    shadowColor: '#000',
+    shadowOffset: {width: 0, height: 1},
+    shadowOpacity: 0.1,
+    shadowRadius: 3,
     width: '95%',
-    alignSelf: 'center',
   },
   textInput: {
     flex: 1,
-    paddingHorizontal: 10,
+    marginHorizontal: 10,
     fontSize: 16,
     color: '#000',
   },

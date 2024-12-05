@@ -1,18 +1,27 @@
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/AntDesign';
-import { Bold } from '../../config/Font';
+import {Bold} from '../../config/Font';
+import {
+  responsiveFontSize,
+  responsiveHeight,
+  responsiveWidth,
+} from 'react-native-responsive-dimensions';
 export default function Header(props) {
-    
   return (
     <View style={styles.header}>
       <TouchableOpacity
         onPress={() => {
           props.navigation.goBack();
         }}>
-        <Icon name="left" size={30} />
+        <Icon name="left" size={responsiveFontSize(2.3)} />
       </TouchableOpacity>
-      <Text style={{paddingHorizontal: 100, fontFamily: Bold, fontSize: 15}}>
+      <Text
+        style={{
+          paddingHorizontal: responsiveWidth(30),
+          fontFamily: Bold,
+          fontSize: responsiveFontSize(2.2),
+        }}>
         {props.title}
       </Text>
     </View>
@@ -22,8 +31,8 @@ export default function Header(props) {
 const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
-    width: '100%',
-    height: 50,
+    width: responsiveWidth(100),
+    height: responsiveHeight(8),
     alignItems: 'center',
   },
 });

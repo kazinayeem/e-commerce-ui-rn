@@ -5,6 +5,7 @@ import {
   TextInput,
   TouchableOpacity,
   View,
+  Image,
 } from 'react-native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/AntDesign';
@@ -12,6 +13,7 @@ import {Bold, Regular, SemiBold} from '../../config/Font';
 import {BlackColor, nextbtncolor, whiteColor} from '../../config/color';
 import {useNavigation} from '@react-navigation/native';
 import Header from './Header';
+import {profile} from '../../config/Image';
 const Profile = () => {
   const navigation = useNavigation();
   return (
@@ -20,6 +22,13 @@ const Profile = () => {
       <ScrollView
         showsVerticalScrollIndicator={false}
         showsHorizontalScrollIndicator={false}>
+        <Image
+          source={profile}
+          width={103}
+          height={98}
+          resizeMode="cover"
+          style={{alignSelf: 'center'}}
+        />
         <Text style={{fontSize: 18, fontFamily: SemiBold, marginBottom: 20}}>
           Personal Details
         </Text>

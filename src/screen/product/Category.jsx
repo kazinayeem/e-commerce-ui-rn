@@ -1,7 +1,7 @@
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import {FlatList} from 'react-native-gesture-handler';
-import { Regular } from '../../config/Font';
+import {Regular} from '../../config/Font';
 
 const Item = ({title, url}) => (
   <TouchableOpacity style={styles.item}>
@@ -14,6 +14,8 @@ const Category = props => {
   return (
     <View style={styles.container}>
       <FlatList
+        showsHorizontalScrollIndicator={false}
+        showsVerticalScrollIndicator={false}
         horizontal
         data={props.data}
         renderItem={({item}) => <Item title={item.name} url={item.url} />}
