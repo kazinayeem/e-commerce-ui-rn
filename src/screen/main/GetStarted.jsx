@@ -4,7 +4,6 @@ import {
   Text,
   StyleSheet,
   ImageBackground,
-  TouchableOpacity,
 } from 'react-native';
 import {GetStartimage} from '../../config/Image';
 import {useNavigation} from '@react-navigation/native';
@@ -15,6 +14,7 @@ import {
   responsiveHeight,
   responsiveWidth,
 } from 'react-native-responsive-dimensions';
+import BigButton from '../../components/Button';
 
 const GetStarted = () => {
   const navigation = useNavigation();
@@ -28,11 +28,18 @@ const GetStarted = () => {
         <View style={styles.footer}>
           <Text style={styles.titleText}>You want Authentic, here you go!</Text>
           <Text style={styles.subtitleText}>Find it here, buy it now!</Text>
-          <TouchableOpacity
-            style={styles.loginButton}
-            onPress={() => navigation.navigate('MyDrawer')}>
-            <Text style={styles.loginButtonText}>Get Started</Text>
-          </TouchableOpacity>
+
+          <BigButton
+            title={'Get Started'}
+            action={navigation.navigate}
+            actiontitle={'MyDrawer'}
+            mb={5}
+            mt={3}
+            h={6.5}
+            br={40}
+            w={90}
+            fs={3.5}
+          />
         </View>
       </ImageBackground>
     </View>

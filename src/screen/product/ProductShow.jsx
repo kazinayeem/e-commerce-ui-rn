@@ -32,9 +32,7 @@ const ProductShow = ({star}) => {
   const renderItem = ({item}) => (
     <TouchableOpacity style={styles.itemContainer}>
       <Image style={styles.productImage} source={{uri: item.image}} />
-      <Text style={styles.productTitle}>
-        {item.title.substring(0, 20)}
-      </Text>
+      <Text style={styles.productTitle}>{item.title.substring(0, 20)}</Text>
       <Text style={styles.productDescription}>
         {item.description.substring(0, 50)}...
       </Text>

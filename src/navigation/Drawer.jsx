@@ -7,6 +7,8 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import Profile from '../screen/profile/Profile';
 import CheckOut from '../screen/profile/CheckOut';
 import {Logo} from '../config/Image';
+import CheckOut2 from '../screen/profile/CheckOut2';
+import PlaceOrder from '../screen/profile/PlaceOrder';
 
 const Drawer = createDrawerNavigator();
 
@@ -15,7 +17,7 @@ export default function MyDrawer() {
     <Drawer.Navigator
       initialRouteName="MainPage"
       screenOptions={({navigation}) => ({
-        headerStyle: {backgroundColor: '#F2F2F2'},
+        headerStyle: {backgroundColor: 'white'},
         headerShadowVisible: false,
         headerTitleAlign: 'center',
         headerLeft: () => (
@@ -57,6 +59,18 @@ export default function MyDrawer() {
         name="CheckOut"
         options={{headerShown: false}}
         component={CheckOut}
+      />
+
+      <Drawer.Screen
+        name="CheckOut2"
+        options={{headerShown: false}}
+        component={CheckOut2}
+      />
+
+      <Drawer.Screen
+        name="PlaceOrder"
+        options={{headerShown: false}}
+        component={PlaceOrder}
       />
     </Drawer.Navigator>
   );

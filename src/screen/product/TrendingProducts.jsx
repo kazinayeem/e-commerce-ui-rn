@@ -74,7 +74,7 @@ const TrendingProducts = () => {
         console.log(e);
       });
   }, []);
-  
+
   return (
     <View>
       <SearchBar />

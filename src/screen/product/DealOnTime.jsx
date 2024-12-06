@@ -1,4 +1,4 @@
-import {View, Text, Image, StyleSheet} from 'react-native';
+import {View, Image, StyleSheet} from 'react-native';
 import React from 'react';
 import {Banner, OnTime} from '../../config/Image';
 import {responsiveWidth} from 'react-native-responsive-dimensions';

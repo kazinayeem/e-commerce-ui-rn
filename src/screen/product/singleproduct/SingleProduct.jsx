@@ -21,6 +21,7 @@ import {
   responsiveHeight,
   responsiveWidth,
 } from 'react-native-responsive-dimensions';
+import BigButton from '../../../components/Button';
 
 const width = Dimensions.get('window').width;
 
@@ -129,16 +130,17 @@ const SingleProduct = props => {
             <Text style={styles.description}>Product Details</Text>
             <Text style={styles.description}>{product?.description}</Text>
           </View>
-
           <View style={styles.btnSection}>
-            <TouchableOpacity accessibilityLabel="Buy Now">
+            <BigButton w={40} h={6} icon={true} bg={'transparent'}>
               <Image source={BuyBtn} />
-            </TouchableOpacity>
+            </BigButton>
 
-            <TouchableOpacity accessibilityLabel="Go to Product Page">
-              <Image source={GotoBtn} />
-            </TouchableOpacity>
+            <BigButton w={40} h={6} icon={true} bg={'transparent'}>
+            <Image source={GotoBtn} />
+            </BigButton>
           </View>
+
+
 
           <TouchableOpacity
             style={styles.deliveryInfo}
