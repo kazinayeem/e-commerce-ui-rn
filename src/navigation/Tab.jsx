@@ -4,11 +4,11 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import Icon1 from 'react-native-vector-icons/MaterialIcons';
 import Icon2 from 'react-native-vector-icons/AntDesign';
 import React from 'react';
-import Product from './screen/product/Product';
 import {View} from 'react-native';
-import ProductNavigation from './screen/product/Navigation';
-import SignIn from './screen/Auth/SignIn';
-import {BlackColor, navigationActiveColor} from './config/color';
+import {BlackColor, navigationActiveColor} from '../config/color';
+import Product from '../screen/product/Product';
+import ProductNavigation from '../screen/product/Navigation';
+import SignIn from '../screen/Auth/SignIn';
 
 const Tab = createBottomTabNavigator();
 

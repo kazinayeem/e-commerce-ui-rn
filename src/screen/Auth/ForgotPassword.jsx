@@ -7,8 +7,9 @@ import {
 } from 'react-native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { BlackColor, bordercolor, btncolor, graycolor } from '../../config/color';
-import { ExtraBold } from '../../config/Font';
+import {BlackColor, bordercolor, btncolor, graycolor} from '../../config/color';
+import {ExtraBold} from '../../config/Font';
+import BigButton from '../../components/Button';
 
 const ForgotPassword = () => {
   return (
@@ -32,10 +33,16 @@ const ForgotPassword = () => {
           * We will send you a message to set or reset your new password
         </Text>
       </TouchableOpacity>
+      <BigButton
+        textcolor={'white'}
+        title={'Submit'}
+        w={90}
+        h={6}
+        fs={2.5}
+        mt={5}
+        mb={5}
+      />
 
-      <TouchableOpacity style={styles.loginButton}>
-        <Text style={styles.loginButtonText}>Submit</Text>
-      </TouchableOpacity>
     </View>
   );
 };
@@ -80,18 +87,6 @@ const styles = StyleSheet.create({
     fontSize: 14,
     alignSelf: 'flex-start',
     marginBottom: 20,
-  },
-  loginButton: {
-    backgroundColor: btncolor,
-    paddingVertical: 15,
-    borderRadius: 8,
-    alignItems: 'center',
-    marginBottom: 20,
-  },
-  loginButtonText: {
-    color: '#fff',
-    fontSize: 18,
-    fontWeight: 'bold',
   },
   orText: {
     textAlign: 'center',

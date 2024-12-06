@@ -1,13 +1,13 @@
 import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import Screen1 from './screen/SplashScreen/Screen1';
-import Screen2 from './screen/SplashScreen/Screen2';
-import Screen3 from './screen/SplashScreen/Screen3';
-import SignIn from './screen/Auth/SignIn';
-import SignUp from './screen/Auth/SignUp';
-import ForgotPassword from './screen/Auth/ForgotPassword';
-import GetStarted from './screen/main/GetStarted';
+import Screen1 from '../screen/SplashScreen/Screen1';
+import Screen2 from '../screen/SplashScreen/Screen2';
+import Screen3 from '../screen/SplashScreen/Screen3';
+import SignIn from '../screen/Auth/SignIn';
+import SignUp from '../screen/Auth/SignUp';
+import ForgotPassword from '../screen/Auth/ForgotPassword';
+import GetStarted from '../screen/main/GetStarted';
 import MyDrawer from './Drawer';
 
 const Stack = createNativeStackNavigator();

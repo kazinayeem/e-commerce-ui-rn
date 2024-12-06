@@ -18,8 +18,27 @@ import {
   responsiveHeight,
   responsiveWidth,
 } from 'react-native-responsive-dimensions';
+import TextInputProfile from '../../components/TextInput';
+import BigButton from '../../components/Button';
 const Profile = () => {
   const navigation = useNavigation();
+  const user = [
+    {title: 'Email Address', placeholder: 'abc@gmail.com'},
+    {title: 'Password', placeholder: '*****', password: true},
+  ];
+  const address = [
+    {title: 'Pincode', placeholder: '12121'},
+    {title: 'Address', placeholder: '123 Dhaka Mirpur'},
+    {title: 'City', placeholder: 'Mirpur'},
+    {title: 'State', placeholder: '12L'},
+    {title: 'Country', placeholder: 'BD'},
+  ];
+
+  const bankdetails = [
+    {title: 'Bank Account Number', placeholder: '205032323'},
+    {title: 'Accounts Holder Number', placeholder: 'MOHAMMAD ALI NAYEEM'},
+    {title: 'SWIFT code', placeholder: 'SB32323'},
+  ];
   return (
     <View style={styles.container}>
       <Header navigation={navigation} title="Profile" />
@@ -33,207 +52,69 @@ const Profile = () => {
           resizeMode="cover"
           style={{alignSelf: 'center'}}
         />
-        <Text style={{fontSize: 18, fontFamily: SemiBold, marginBottom: 20}}>
-          Personal Details
-        </Text>
+
         <View style={{flexDirection: 'column', gap: 15}}>
-          <View style={{flexDirection: 'column', gap: 3}}>
-            <Text style={{fontSize: 12, fontFamily: Regular}}>
-              Email Address
-            </Text>
-            <TextInput
-              placeholder="abc@gmail.com"
-              placeholderTextColor={BlackColor}
-              style={{
-                width: '100%',
-                height: 48,
-                borderColor: '#C8C8C8',
-                borderRadius: 5,
-                borderWidth: 1,
-              }}
+          <Text style={{fontSize: 18, fontFamily: SemiBold}}>
+            Personal Details
+          </Text>
+          {user.map(u => (
+            <TextInputProfile
+              key={u.placeholder}
+              placeholdercolor={BlackColor}
+              placeholder={u.placeholder}
+              title={u.title}
+              password={u.password || false}
             />
-          </View>
-
-          <View style={{flexDirection: 'column', gap: 3}}>
-            <Text style={{fontSize: 12, fontFamily: Regular}}>
-              Email Address
+          ))}
+          <TouchableOpacity>
+            <Text style={{color: nextbtncolor, textAlign: 'right'}}>
+              Change Password
             </Text>
-            <TextInput
-              placeholder="*****"
-              placeholderTextColor={BlackColor}
-              secureTextEntry
-              style={{
-                width: '100%',
-                height: 48,
-                borderColor: '#C8C8C8',
-                borderRadius: 5,
-                borderWidth: 1,
-              }}
-            />
-
-            <TouchableOpacity>
-              <Text style={{color: nextbtncolor, textAlign: 'right'}}>
-                Change Password
-              </Text>
-            </TouchableOpacity>
-          </View>
+          </TouchableOpacity>
         </View>
 
         {/* Business Address Details */}
-        <Text style={{fontSize: 18, fontFamily: SemiBold, marginBottom: 20}}>
-          Business Address Details
-        </Text>
+
         <View style={{flexDirection: 'column', gap: 15}}>
-          <View style={{flexDirection: 'column', gap: 3}}>
-            <Text style={{fontSize: 12, fontFamily: Regular}}>Pincode</Text>
-            <TextInput
-              placeholder="232323"
-              placeholderTextColor={BlackColor}
-              style={{
-                width: '100%',
-                height: 48,
-                borderColor: '#C8C8C8',
-                borderRadius: 5,
-                borderWidth: 1,
-              }}
-            />
-          </View>
-          <View style={{flexDirection: 'column', gap: 3}}>
-            <Text style={{fontSize: 12, fontFamily: Regular}}>Address</Text>
-            <TextInput
-              placeholder="216 Dhaka Mirpur"
-              placeholderTextColor={BlackColor}
-              style={{
-                width: '100%',
-                height: 48,
-                borderColor: '#C8C8C8',
-                borderRadius: 5,
-                borderWidth: 1,
-              }}
-            />
-          </View>
+          <Text style={{fontSize: 18, fontFamily: SemiBold, marginBottom: 20}}>
+            Business Address Details
+          </Text>
 
-          <View style={{flexDirection: 'column', gap: 3}}>
-            <Text style={{fontSize: 12, fontFamily: Regular}}>City</Text>
-            <TextInput
-              placeholder="Mirpur"
-              placeholderTextColor={BlackColor}
-              style={{
-                width: '100%',
-                height: 48,
-                borderColor: '#C8C8C8',
-                borderRadius: 5,
-                borderWidth: 1,
-              }}
+          {address.map(d => (
+            <TextInputProfile
+              key={d.title}
+              placeholdercolor={BlackColor}
+              placeholder={d.placeholder}
+              title={d.title}
             />
-          </View>
-          <View style={{flexDirection: 'column', gap: 3}}>
-            <Text style={{fontSize: 12, fontFamily: Regular}}>State</Text>
-            <TextInput
-              placeholder="N1 2LL"
-              placeholderTextColor={BlackColor}
-              style={{
-                width: '100%',
-                height: 48,
-                borderColor: '#C8C8C8',
-                borderRadius: 5,
-                borderWidth: 1,
-              }}
-            />
-          </View>
-
-          <View style={{flexDirection: 'column', gap: 3}}>
-            <Text style={{fontSize: 12, fontFamily: Regular}}>Country</Text>
-            <TextInput
-              placeholder="UK"
-              placeholderTextColor={BlackColor}
-              style={{
-                width: '100%',
-                height: 48,
-                borderColor: '#C8C8C8',
-                borderRadius: 5,
-                borderWidth: 1,
-              }}
-            />
-          </View>
+          ))}
         </View>
 
         {/* Bank Account Details */}
 
-        <Text style={{fontSize: 18, fontFamily: SemiBold, marginBottom: 20}}>
-          Business Address Details
-        </Text>
         <View style={{flexDirection: 'column', gap: 15}}>
-          <View style={{flexDirection: 'column', gap: 3}}>
-            <Text style={{fontSize: 12, fontFamily: Regular}}>
-              Bank Account Number
-            </Text>
-            <TextInput
-              placeholder="205034223"
-              placeholderTextColor={BlackColor}
-              style={{
-                width: '100%',
-                height: 48,
-                borderColor: '#C8C8C8',
-                borderRadius: 5,
-                borderWidth: 1,
-              }}
+          <Text style={{fontSize: 18, fontFamily: SemiBold}}>
+            Bank Address Details
+          </Text>
+          {bankdetails.map(d => (
+            <TextInputProfile
+              key={d.title}
+              placeholdercolor={BlackColor}
+              placeholder={d.placeholder}
+              title={d.title}
             />
-          </View>
-          <View style={{flexDirection: 'column', gap: 3}}>
-            <Text style={{fontSize: 12, fontFamily: Regular}}>
-              Account Holder’s Name
-            </Text>
-            <TextInput
-              placeholder="Mohammad ali nayeem"
-              placeholderTextColor={BlackColor}
-              style={{
-                width: '100%',
-                height: 48,
-                borderColor: '#C8C8C8',
-                borderRadius: 5,
-                borderWidth: 1,
-              }}
-            />
-          </View>
-
-          <View style={{flexDirection: 'column', gap: 3}}>
-            <Text style={{fontSize: 12, fontFamily: Regular}}>IFSC Code</Text>
-            <TextInput
-              placeholder="SBIN00428"
-              placeholderTextColor={BlackColor}
-              style={{
-                width: '100%',
-                height: 48,
-                borderColor: '#C8C8C8',
-                borderRadius: 5,
-                borderWidth: 1,
-              }}
-            />
-          </View>
+          ))}
         </View>
 
-        <TouchableOpacity
-          style={{
-            width: '100%',
-            height: 52,
-            backgroundColor: nextbtncolor,
-            borderRadius: 5,
-            marginBottom: 50,
-            marginTop: 20,
-
-            justifyContent: 'center',
-          }}>
-          <Text
-            style={{
-              textAlign: 'center',
-              fontFamily: SemiBold,
-              fontSize: 16,
-              color: whiteColor,
-            }}>
-            Save
-          </Text>
-        </TouchableOpacity>
+        <BigButton
+          textcolor={'white'}
+          title={' Save'}
+          w={95}
+          h={6}
+          fs={2.5}
+          mt={10}
+          mb={5}
+        />
       </ScrollView>
     </View>
   );

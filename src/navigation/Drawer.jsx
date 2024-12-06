@@ -4,9 +4,10 @@ import React from 'react';
 import MyTabs from './Tab';
 import {Alert, Image, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import {Logo} from './config/Image';
-import Profile from './screen/profile/Profile';
-import CheckOut from './screen/profile/CheckOut';
+import Profile from '../screen/profile/Profile';
+import CheckOut from '../screen/profile/CheckOut';
+import {Logo} from '../config/Image';
+
 const Drawer = createDrawerNavigator();
 
 export default function MyDrawer() {

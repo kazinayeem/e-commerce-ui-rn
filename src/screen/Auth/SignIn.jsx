@@ -8,8 +8,9 @@ import {
 import React from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {useNavigation} from '@react-navigation/native';
-import { bordercolor, btncolor, graycolor } from '../../config/color';
-import { ExtraBold } from '../../config/Font';
+import {bordercolor, btncolor, graycolor} from '../../config/color';
+import {ExtraBold} from '../../config/Font';
+import BigButton from '../../components/Button';
 const SignIn = () => {
   const navigation = useNavigation();
   return (
@@ -42,10 +43,15 @@ const SignIn = () => {
       <TouchableOpacity onPress={() => navigation.navigate('ForgotPassword')}>
         <Text style={styles.forgotPasswordText}>Forgot Password?</Text>
       </TouchableOpacity>
-
-      <TouchableOpacity style={styles.loginButton}>
-        <Text style={styles.loginButtonText}>Login</Text>
-      </TouchableOpacity>
+      <BigButton
+        textcolor={'white'}
+        title={'Login'}
+        w={90}
+        h={6}
+        fs={2.5}
+        mt={5}
+        mb={5}
+      />
 
       <Text style={styles.orText}>- OR Continue with -</Text>
 
@@ -68,7 +74,6 @@ const SignIn = () => {
           <Text
             style={styles.signUpText}
             onPress={() => navigation.navigate('SignUp')}>
-            {' '}
             Sign Up
           </Text>
         </TouchableOpacity>

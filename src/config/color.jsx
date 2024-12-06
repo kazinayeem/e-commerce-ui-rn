@@ -6,4 +6,4 @@ export const nextbtncolor = '#F83758';
 export const btncolor = '#ff5a5f';
 export const graycolor = '#8c8c8c';
 export const bordercolor = '#ccc';
-export const titlecolor = '#A8A8A9'
+export const titlecolor = '#A8A8A9';

@@ -15,7 +15,7 @@ import {
   responsiveWidth,
 } from 'react-native-responsive-dimensions';
 
-const Screen2 = () => {
+const Screen3 = () => {
   const navigation = useNavigation();
   const totalSteps = 3;
   const currentStep = 3;
@@ -133,4 +133,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Screen2;
+export default Screen3;

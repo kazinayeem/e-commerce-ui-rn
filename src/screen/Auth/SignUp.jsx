@@ -8,8 +8,9 @@ import {
 import React from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {useNavigation} from '@react-navigation/native';
-import { bordercolor, btncolor, graycolor } from '../../config/color';
-import { ExtraBold } from '../../config/Font';
+import {bordercolor, btncolor, graycolor} from '../../config/color';
+import {ExtraBold} from '../../config/Font';
+import BigButton from '../../components/Button';
 const SignUp = () => {
   const navigation = useNavigation();
   return (
@@ -55,10 +56,15 @@ const SignUp = () => {
           By clicking the Register button, you agree to the public offer
         </Text>
       </TouchableOpacity>
-
-      <TouchableOpacity style={styles.loginButton}>
-        <Text style={styles.loginButtonText}>Create Account</Text>
-      </TouchableOpacity>
+      <BigButton
+        textcolor={'white'}
+        title={'Create Account'}
+        w={90}
+        h={6}
+        fs={2.5}
+        mt={5}
+        mb={5}
+      />
 
       <Text style={styles.orText}>- OR Continue with -</Text>
 
@@ -125,18 +131,6 @@ const styles = StyleSheet.create({
     fontSize: 14,
     alignSelf: 'flex-start',
     marginBottom: 20,
-  },
-  loginButton: {
-    backgroundColor: btncolor,
-    paddingVertical: 15,
-    borderRadius: 8,
-    alignItems: 'center',
-    marginBottom: 20,
-  },
-  loginButtonText: {
-    color: '#fff',
-    fontSize: 18,
-    fontWeight: 'bold',
   },
   orText: {
     textAlign: 'center',
