@@ -1,0 +1,129 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/Montserrat-Black.ttf",
+      "sha1": "ea4feb16f3d8cb3f1cbc8e3a7af7388cc01ce32e"
+    },
+    {
+      "path": "assets/fonts/Montserrat-Bold.ttf",
+      "sha1": "c7d907722af4fb845ab97d515bb414f29651f000"
+    },
+    {
+      "path": "assets/fonts/Montserrat-ExtraBold.ttf",
+      "sha1": "4a2cbee7a7ab79ab2cf0c120c962384dc240b237"
+    },
+    {
+      "path": "assets/fonts/Montserrat-ExtraLight.ttf",
+      "sha1": "c198620afdbc8ebbb68ea2b71ffab9188037d602"
+    },
+    {
+      "path": "assets/fonts/Montserrat-ExtraLightItalic.ttf",
+      "sha1": "a2fc69ceaf90f83fc899ee75190b3ef954e5e073"
+    },
+    {
+      "path": "assets/fonts/Montserrat-Light.ttf",
+      "sha1": "1db8878a7654208b6c55402f6ff717e03a312e1e"
+    },
+    {
+      "path": "assets/fonts/Montserrat-Medium.ttf",
+      "sha1": "4656e40419da86a5fec473ea8e7fc0efef183f05"
+    },
+    {
+      "path": "assets/fonts/Montserrat-Regular.ttf",
+      "sha1": "1c8119b38eef1914a4fbd9f6cfdedf198445ab97"
+    },
+    {
+      "path": "assets/fonts/Montserrat-SemiBold.ttf",
+      "sha1": "d491c9d0af61faef59ca807737b560170f547f5b"
+    },
+    {
+      "path": "assets/fonts/Montserrat-Thin.ttf",
+      "sha1": "447838642258b95e8a61df1770189f962cc0741b"
+    },
+    {
+      "path": "assets/images/banner.png",
+      "sha1": "5bbcf677e064b486cc0ceb39a1662472871e94b5"
+    },
+    {
+      "path": "assets/images/banner2.png",
+      "sha1": "b6f620d58b4fbafe82eb29497607ddb7204d143f"
+    },
+    {
+      "path": "assets/images/buynow.png",
+      "sha1": "d739d67c00d247e5dd8e860c2acedb013c466407"
+    },
+    {
+      "path": "assets/images/dealonphoto.png",
+      "sha1": "f21576c0d10626162bd4aea532ea3e0d7025bb3c"
+    },
+    {
+      "path": "assets/images/getstartimage.png",
+      "sha1": "ce8a9f6e42db67cd83e257bc5a60833c46081a80"
+    },
+    {
+      "path": "assets/images/gotocart.png",
+      "sha1": "03272272a72f282e8cf43bfb73e7dd594f1ad475"
+    },
+    {
+      "path": "assets/images/Group33769.png",
+      "sha1": "10d9d0e1969a7266d9d6819b35bf308ffc9b2a50"
+    },
+    {
+      "path": "assets/images/groupprofile.png",
+      "sha1": "16ebc73a6e22aee7f06322b413b613ddb1515e04"
+    },
+    {
+      "path": "assets/images/image1.png",
+      "sha1": "bbe47e920dddb666fce41635a88e9acb7afa0651"
+    },
+    {
+      "path": "assets/images/image2.png",
+      "sha1": "bc246748cdbf59c642cc7af514155956a36581d1"
+    },
+    {
+      "path": "assets/images/image3.png",
+      "sha1": "d25e86381c7b2b8655261cf4dde40cc4f23a6f47"
+    },
+    {
+      "path": "assets/images/loading.png",
+      "sha1": "db6387f73f4a46d2ceb25b751c2eecb3004fa57c"
+    },
+    {
+      "path": "assets/images/logo.png",
+      "sha1": "fb251636ac5697b27280d8e292d5c6d968d731a0"
+    },
+    {
+      "path": "assets/images/mac.png",
+      "sha1": "735eae7ef4041d35f62162294384f11b77426d4f"
+    },
+    {
+      "path": "assets/images/p1.png",
+      "sha1": "8014b7f2dc116d23c6e873f7df8268c3290778f3"
+    },
+    {
+      "path": "assets/images/p2.png",
+      "sha1": "a4d3a11a99c63f0428ce7c33d07df5ff71d04f09"
+    },
+    {
+      "path": "assets/images/p3.png",
+      "sha1": "4e73bf8b71864b6486bc57a144e6838b96de3830"
+    },
+    {
+      "path": "assets/images/p4.png",
+      "sha1": "bbe3ac49d5e78755940ca02f4a3b08eca524c88b"
+    },
+    {
+      "path": "assets/images/sponsor.png",
+      "sha1": "cdf0cd49c0d5fd33ee44948d93c43ade8ade4c4f"
+    },
+    {
+      "path": "assets/images/summer.png",
+      "sha1": "10d9d0e1969a7266d9d6819b35bf308ffc9b2a50"
+    },
+    {
+      "path": "assets/images/trandingproduct.png",
+      "sha1": "ce49705a55fc498f921f27f8a38544a1eff06065"
+    }
+  ]
+}
