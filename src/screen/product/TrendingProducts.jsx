@@ -1,22 +1,22 @@
+import { useNavigation } from '@react-navigation/native';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import {
+  ActivityIndicator,
   FlatList,
   Image,
   Text,
   TouchableOpacity,
   View,
-  ActivityIndicator,
 } from 'react-native';
-import React, {useEffect, useState} from 'react';
-import SearchBar from './SearchBar';
-import All_Featured from './All-Featured';
-import axios from 'axios';
-import {useNavigation} from '@react-navigation/native';
-import {Medium, Regular} from '../../config/Font';
 import {
   responsiveFontSize,
   responsiveHeight,
   responsiveWidth,
 } from 'react-native-responsive-dimensions';
+import { Medium, Regular } from '../../config/Font';
+import All_Featured from './All-Featured';
+import SearchBar from './SearchBar';
 
 const Item = ({item, navigation}) => {
   return (
@@ -32,13 +32,13 @@ const Item = ({item, navigation}) => {
       <Image
         style={{borderRadius: 10, alignSelf: 'center'}}
         source={{
-          uri: item.images[0],
+          uri: item.image[0],
         }}
         width={'100%'}
         height={'75%'}
       />
       <TouchableOpacity
-        onPress={() => navigation.navigate('SingleProduct', {id: item.id})}
+        onPress={() => navigation.navigate('SingleProduct', {id: item._id})}
         style={{paddingHorizontal: responsiveWidth(2)}}>
         <Text
           style={{
@@ -46,7 +46,7 @@ const Item = ({item, navigation}) => {
             fontFamily: Medium,
             fontWeight: '700',
           }}>
-          {item.title.substring(0, 15)}..
+          {item.name.substring(0, 15)}..
         </Text>
         <Text
           style={{
@@ -68,7 +68,7 @@ const TrendingProducts = () => {
 
   useEffect(() => {
     axios
-      .get('https://dummyjson.com/products')
+      .get('https://myshop-2-production.up.railway.app/api/products')
       .then(res => setproduct(res.data.products))
       .catch(e => {
         console.log(e);
@@ -92,7 +92,7 @@ const TrendingProducts = () => {
           numColumns={2}
           data={product}
           renderItem={({item}) => <Item item={item} navigation={navigation} />}
-          keyExtractor={item => item.id}
+          keyExtractor={item => item._id}
         />
       )}
     </View>

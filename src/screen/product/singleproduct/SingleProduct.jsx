@@ -1,3 +1,5 @@
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import {
   ActivityIndicator,
   Dimensions,
@@ -8,20 +10,19 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import React, {useEffect, useState} from 'react';
-import axios from 'axios';
 import Carousel from 'react-native-reanimated-carousel';
-import {StarRatingDisplay} from 'react-native-star-rating-widget';
-import {BuyBtn, GotoBtn} from '../../../config/Image';
-import All_Featured from '../All-Featured';
-import ProductShow from '../ProductShow';
-import {Bold, Regular, SemiBold, Thin} from '../../../config/Font';
+import RenderHTML from 'react-native-render-html';
 import {
   responsiveFontSize,
   responsiveHeight,
   responsiveWidth,
 } from 'react-native-responsive-dimensions';
+import { StarRatingDisplay } from 'react-native-star-rating-widget';
 import BigButton from '../../../components/Button';
+import { Bold, Regular, SemiBold, Thin } from '../../../config/Font';
+import { BuyBtn, GotoBtn } from '../../../config/Image';
+import All_Featured from '../All-Featured';
+import ProductShow from '../ProductShow';
 
 const width = Dimensions.get('window').width;
 
@@ -30,7 +31,9 @@ const SingleProduct = props => {
 
   useEffect(() => {
     axios
-      .get(`https://dummyjson.com/products/${props.route.params.id}`)
+      .get(
+        `https://myshop-2-production.up.railway.app/api/products/${props.route.params.id}`,
+      )
       .then(res => setProduct(res.data))
       .catch(e => {
         console.log(e);
@@ -50,32 +53,29 @@ const SingleProduct = props => {
         <ScrollView>
           <Carousel
             width={width}
-            height={width / 1.5} // Updated to make the carousel a bit taller for better aspect ratio
+            height={width / 1.5}
             autoPlay={true}
-            data={product.images}
+            data={product.image}
             scrollAnimationDuration={2000}
             renderItem={({index}) => (
               <Image
-                source={{uri: product.images[index]}}
+                source={{uri: product.image[index]}}
                 style={styles.carouselImage}
               />
             )}
           />
 
           <View style={styles.detailsContainer}>
-            <Text style={styles.title}>Size : 7UK</Text>
+            {product?.priceByVariant?.length && (
+              <Text style={styles.title}>Size/Varient</Text>
+            )}
 
             <View style={styles.sizebtnContainer}>
-              {[6, 7, 8, 9, 10].map(size => (
-                <TouchableOpacity
-                  key={size}
-                  style={[styles.sizebtn, size === 7 && styles.btnActiveColor]}>
+              {product?.priceByVariant?.map(v => (
+                <TouchableOpacity key={v._id} style={styles.sizebtn}>
                   <Text
-                    style={[
-                      styles.btnText,
-                      size === 7 && styles.btnTextActive,
-                    ]}>
-                    {size}UK
+                    style={[styles.btnText, v === 7 && styles.btnTextActive]}>
+                    {v.name} {v.value}
                   </Text>
                 </TouchableOpacity>
               ))}
@@ -108,39 +108,48 @@ const SingleProduct = props => {
                   textDecorationLine: 'line-through',
                   fontFamily: Thin,
                 }}>
-                ${product?.price + 200}
+                ${product?.price}
               </Text>
               <Text
                 style={{
                   fontSize: 15,
                   fontFamily: Regular,
                 }}>
-                ${product?.price}
+                ${product?.discountedPrice}
               </Text>
-              <Text
-                style={{
-                  color: '#FA7189',
-                  fontSize: 15,
-                  fontFamily: Bold,
-                }}>
-                {Math.round(Math.random() * 50)}% Off
-              </Text>
+              {product?.discount && (
+                <Text
+                  style={{
+                    fontSize: 15,
+                    fontFamily: Regular,
+                    color: '#FA7189',
+                  }}>
+                  {product?.discount}% off
+                </Text>
+              )}
+            </View>
+
+            <View style={styles.btnSection}>
+              <BigButton w={40} h={6} icon={true} bg={'transparent'}>
+                <Image source={BuyBtn} />
+              </BigButton>
+
+              <BigButton w={40} h={6} icon={true} bg={'transparent'}>
+                <Image source={GotoBtn} />
+              </BigButton>
             </View>
 
             <Text style={styles.description}>Product Details</Text>
-            <Text style={styles.description}>{product?.description}</Text>
+            {/* <Text style={styles.description}></Text> */}
+            <RenderHTML
+              contentWidth={width}
+              source={
+                product?.description
+                  ? {html: product.description}
+                  : {html: '<p></p>'}
+              }
+            />
           </View>
-          <View style={styles.btnSection}>
-            <BigButton w={40} h={6} icon={true} bg={'transparent'}>
-              <Image source={BuyBtn} />
-            </BigButton>
-
-            <BigButton w={40} h={6} icon={true} bg={'transparent'}>
-            <Image source={GotoBtn} />
-            </BigButton>
-          </View>
-
-
 
           <TouchableOpacity
             style={styles.deliveryInfo}
@@ -207,11 +216,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     width: '95%',
     alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: 'space-evenly',
   },
   sizebtn: {
     borderColor: '#FA7189',
-    width: responsiveWidth(12),
+    width: responsiveWidth(20),
     height: responsiveHeight(4),
     borderWidth: responsiveWidth(0.3),
     borderRadius: 8,
@@ -221,7 +230,7 @@ const styles = StyleSheet.create({
   btnText: {
     textAlign: 'center',
     color: '#FA7189',
-    fontSize: responsiveFontSize(1.8),
+    fontSize: responsiveFontSize(1.2),
     fontFamily: SemiBold,
   },
   btnTextActive: {
