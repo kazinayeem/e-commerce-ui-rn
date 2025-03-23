@@ -1,21 +1,21 @@
 /* eslint-disable react/no-unstable-nested-components */
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import React from 'react';
+import { View } from 'react-native';
+import Icon2 from 'react-native-vector-icons/AntDesign';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Icon1 from 'react-native-vector-icons/MaterialIcons';
-import Icon2 from 'react-native-vector-icons/AntDesign';
-import React from 'react';
-import {View} from 'react-native';
-import {BlackColor, navigationActiveColor} from '../config/color';
-import Product from '../screen/product/Product';
-import ProductNavigation from '../screen/product/Navigation';
+import { BlackColor, navigationActiveColor } from '../config/color';
 import SignIn from '../screen/Auth/SignIn';
+import ProductNavigation from '../screen/product/Navigation';
+import Product from '../screen/product/Product';
 
 const Tab = createBottomTabNavigator();
 
 function MyTabs() {
   return (
     <Tab.Navigator
-      initialRouteName="Product"
+      // initialRouteName="WishList"
       screenOptions={{headerShown: false}}>
       <Tab.Screen
         name="Home"
@@ -33,7 +33,7 @@ function MyTabs() {
         }}
       />
       <Tab.Screen
-        name="WishList"
+        name="Products"
         component={ProductNavigation}
         options={{
           tabBarIcon: ({focused}) => {

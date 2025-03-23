@@ -1,15 +1,25 @@
-import {Image, ScrollView, View} from 'react-native';
-import React from 'react';
-import SearchBar from './SearchBar';
+import axios from 'axios';
+import React, { useEffect } from 'react';
+import { Image, ScrollView, View } from 'react-native';
+import { responsiveWidth } from 'react-native-responsive-dimensions';
+import { Banner2, Mac, Sponsor, Summer, Tranding } from '../../config/Image';
 import All_Featured from './All-Featured';
-import DealOnTime from './DealOnTime';
 import Category from './Category';
-import {data} from './porducturl';
+import DealOnTime from './DealOnTime';
 import ProductShow from './ProductShow';
-import {Banner2, Mac, Sponsor, Summer, Tranding} from '../../config/Image';
-import {responsiveWidth} from 'react-native-responsive-dimensions';
+import SearchBar from './SearchBar';
 
 const Product = () => {
+  const [CategoryData, setCategoryData] = React.useState([]);
+  useEffect(() => {
+    axios
+      .get('https://myshop-2-production.up.railway.app/api/categories')
+      .then(res => {
+        setCategoryData(res.data);
+      })
+      .catch(e => console.log(e));
+  }, []);
+
   return (
     <View style={{width: responsiveWidth(100)}}>
       <SearchBar />
@@ -18,7 +28,7 @@ const Product = () => {
         showsVerticalScrollIndicator={false}
         style={{width: responsiveWidth(100)}}>
         <All_Featured title={'All Featured'} />
-        <Category data={data} />
+        <Category data={CategoryData} />
         <DealOnTime />
         <ProductShow star={true} />
         <Image

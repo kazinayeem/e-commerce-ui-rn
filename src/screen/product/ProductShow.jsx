@@ -1,26 +1,28 @@
-import React, {useState, useEffect} from 'react';
+import {useNavigation} from '@react-navigation/native';
+import axios from 'axios';
+import React, {useEffect, useState} from 'react';
 import {
-  View,
-  Text,
+  ActivityIndicator,
   FlatList,
   Image,
-  TouchableOpacity,
-  ActivityIndicator,
   StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from 'react-native';
-import axios from 'axios';
 import {StarRatingDisplay} from 'react-native-star-rating-widget';
 import {Light, Medium, Regular} from '../../config/Font';
+import {takaSymbol} from '../../config/Image';
 
 const ProductShow = ({star}) => {
   const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(true);
-
+  const navigation = useNavigation();
   useEffect(() => {
     axios
-      .get('https://fakestoreapi.com/products?limit=20')
+      .get('https://myshop-2-production.up.railway.app/api/products')
       .then(res => {
-        setProduct(res.data);
+        setProduct(res.data.products);
         setLoading(false);
       })
       .catch(error => {
@@ -31,19 +33,32 @@ const ProductShow = ({star}) => {
 
   const renderItem = ({item}) => (
     <TouchableOpacity style={styles.itemContainer}>
-      <Image style={styles.productImage} source={{uri: item.image}} />
-      <Text style={styles.productTitle}>{item.title.substring(0, 20)}</Text>
-      <Text style={styles.productDescription}>
-        {item.description.substring(0, 50)}...
-      </Text>
-      <Text style={styles.productPrice}>₹{item.price}</Text>
-
-      <View style={styles.discountContainer}>
-        <Text style={styles.strikeThroughPrice}>₹{item.price + 500}</Text>
-        <Text style={styles.discountText}>
-          {Math.round(Math.random() * 100)}% Off
+      <Image style={styles.productImage} source={{uri: item.image[0]}} />
+      <TouchableOpacity
+        onPress={() =>
+          navigation.navigate('Products', {
+            screen: 'SingleProduct',
+            params: {id: item._id},
+          })
+        }>
+        <Text style={styles.productTitle}>{item?.name?.substring(0, 20)}</Text>
+        {/* <Text style={styles.productDescription}>
+        see more details on the product page...
+      </Text> */}
+        <Text style={styles.productPrice}>
+          {' '}
+          {item?.priceByVariant && item?.priceByVariant[0]?.price
+            ? 'Click to see price'
+            : `${takaSymbol}${item.price}`}
         </Text>
-      </View>
+
+        <View style={styles.discountContainer}>
+          {/* <Text style={styles.strikeThroughPrice}>₹{item.price + 500}</Text> */}
+          <Text style={styles.discountText}>
+            {Math.round(Math.random() * 100)}% Off
+          </Text>
+        </View>
+      </TouchableOpacity>
 
       {star && (
         <View style={styles.ratingContainer}>
@@ -74,7 +89,7 @@ const ProductShow = ({star}) => {
         horizontal
         data={product}
         renderItem={renderItem}
-        keyExtractor={item => item.id.toString()}
+        keyExtractor={item => item._id}
         showsHorizontalScrollIndicator={false}
       />
     </View>
@@ -96,10 +111,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   itemContainer: {
-    alignItems: 'center',
+    alignItems: 'flex-start',
     width: 170,
     backgroundColor: 'white',
-    borderRadius: 5,
+    borderRadius: 10,
     marginHorizontal: 10,
     paddingStart: 5,
   },
@@ -109,9 +124,11 @@ const styles = StyleSheet.create({
     height: 124,
   },
   productTitle: {
-    fontSize: 12,
+    fontSize: 14,
     fontFamily: Medium,
     alignSelf: 'flex-start',
+    marginTop: 5,
+    paddingHorizontal: 2,
   },
   productDescription: {
     fontSize: 10,

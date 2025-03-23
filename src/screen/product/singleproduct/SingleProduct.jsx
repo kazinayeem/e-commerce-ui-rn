@@ -14,13 +14,12 @@ import Carousel from 'react-native-reanimated-carousel';
 import RenderHTML from 'react-native-render-html';
 import {
   responsiveFontSize,
-  responsiveHeight,
   responsiveWidth,
 } from 'react-native-responsive-dimensions';
 import { StarRatingDisplay } from 'react-native-star-rating-widget';
 import BigButton from '../../../components/Button';
 import { Bold, Regular, SemiBold, Thin } from '../../../config/Font';
-import { BuyBtn, GotoBtn } from '../../../config/Image';
+import { BuyBtn, GotoBtn, takaSymbol } from '../../../config/Image';
 import All_Featured from '../All-Featured';
 import ProductShow from '../ProductShow';
 
@@ -28,29 +27,45 @@ const width = Dimensions.get('window').width;
 
 const SingleProduct = props => {
   const [product, setProduct] = useState(null);
+  const [selectedProduct, setSelectedProduct] = useState({
+    name: '',
+    value: '',
+    price: 0,
+    stock: 0,
+    image: '',
+    _id: '',
+  });
 
   useEffect(() => {
     axios
       .get(
         `https://myshop-2-production.up.railway.app/api/products/${props.route.params.id}`,
       )
-      .then(res => setProduct(res.data))
-      .catch(e => {
-        console.log(e);
-      });
+      .then(res => {
+        setProduct(res.data);
+        if (res.data.priceByVariant.length > 0 && res.data.priceByVariant[0]) {
+          setSelectedProduct({
+            name: res.data.priceByVariant[0].name,
+            value: res.data.priceByVariant[0].value,
+            price: res.data.priceByVariant[0].price,
+            buyingPrice: res.data.priceByVariant[0].buyingPrice,
+            stock: res.data.priceByVariant[0].stock,
+            image: res.data.priceByVariant[0].image,
+            _id: res.data.priceByVariant[0]._id,
+          });
+        }
+      })
+      .catch(e => console.log(e));
   }, [props.route.params.id]);
-
   return (
     <View style={styles.container}>
       {!product ? (
         <View style={styles.loaderContainer}>
           <ActivityIndicator size="large" color="#6666" />
-          <ActivityIndicator size="large" color="#3434" />
-          <ActivityIndicator size="large" color="#355" />
-          <ActivityIndicator size="large" color="#3423" />
         </View>
       ) : (
         <ScrollView>
+          {/* Image Carousel */}
           <Carousel
             width={width}
             height={width / 1.5}
@@ -65,30 +80,48 @@ const SingleProduct = props => {
             )}
           />
 
+          {/* Product Details */}
           <View style={styles.detailsContainer}>
-            {product?.priceByVariant?.length && (
-              <Text style={styles.title}>Size/Varient</Text>
+            {' '}
+            <Text style={styles.title}>{product?.name}</Text>
+            {product?.priceByVariant?.length > 0 && (
+              <Text style={styles.title}>Size/Variant</Text>
             )}
-
+            {/* Variant Selection */}
             <View style={styles.sizebtnContainer}>
               {product?.priceByVariant?.map(v => (
-                <TouchableOpacity key={v._id} style={styles.sizebtn}>
+                <TouchableOpacity
+                  key={v._id}
+                  style={[
+                    styles.sizebtn,
+                    selectedProduct._id === v._id && styles.btnActiveColor,
+                  ]}
+                  onPress={() => {
+                    setSelectedProduct({
+                      name: v.name,
+                      value: v.value,
+                      price: v.price,
+                      buyingPrice: v.buyingPrice,
+                      stock: v.stock,
+                      image: v.image,
+                      _id: v._id,
+                    });
+                  }}>
                   <Text
-                    style={[styles.btnText, v === 7 && styles.btnTextActive]}>
+                    style={[
+                      styles.btnText,
+                      selectedProduct._id === v._id && styles.btnTextActive,
+                    ]}>
                     {v.name} {v.value}
                   </Text>
                 </TouchableOpacity>
               ))}
             </View>
-
-            <Text style={styles.title}>{product?.title}</Text>
-            <Text style={{fontFamily: Regular}}>
-              Vision Alta Men’s Shoes Size (All Colours)
-            </Text>
-
+            {/* Product Name */}
+            {/* Star Rating */}
             <View style={styles.starContainer}>
               <StarRatingDisplay
-                rating={product.rating || 0} // Using actual rating from API
+                rating={product.rating || 0}
                 maxStars={5}
                 starSize={20}
                 emptyColor="#A4A9B3"
@@ -99,36 +132,26 @@ const SingleProduct = props => {
                 {product.rating?.count || 0}+ reviews
               </Text>
             </View>
-
+            {/* Price Section */}
             <View style={styles.priceContainer}>
-              <Text
-                style={{
-                  fontSize: 14,
-                  color: '#808488',
-                  textDecorationLine: 'line-through',
-                  fontFamily: Thin,
-                }}>
-                ${product?.price}
+              <Text style={styles.strikeThrough}>
+                {takaSymbol}{' '}
+                {selectedProduct.name
+                  ? selectedProduct.price + Math.round(Math.random() * 100)
+                  : product.price + Math.round(Math.random() * 100)}
               </Text>
-              <Text
-                style={{
-                  fontSize: 15,
-                  fontFamily: Regular,
-                }}>
-                ${product?.discountedPrice}
+
+              <Text style={styles.priceText}>
+                {takaSymbol}{' '}
+                {selectedProduct.name ? selectedProduct.price : product.price}
               </Text>
               {product?.discount && (
-                <Text
-                  style={{
-                    fontSize: 15,
-                    fontFamily: Regular,
-                    color: '#FA7189',
-                  }}>
+                <Text style={styles.discountText}>
                   {product?.discount}% off
                 </Text>
               )}
             </View>
-
+            {/* Buttons */}
             <View style={styles.btnSection}>
               <BigButton w={40} h={6} icon={true} bg={'transparent'}>
                 <Image source={BuyBtn} />
@@ -138,9 +161,8 @@ const SingleProduct = props => {
                 <Image source={GotoBtn} />
               </BigButton>
             </View>
-
+            {/* Product Description */}
             <Text style={styles.description}>Product Details</Text>
-            {/* <Text style={styles.description}></Text> */}
             <RenderHTML
               contentWidth={width}
               source={
@@ -151,16 +173,10 @@ const SingleProduct = props => {
             />
           </View>
 
-          <TouchableOpacity
-            style={styles.deliveryInfo}
-            accessibilityLabel="Delivery Info">
-            <Text style={{textAlign: 'left', fontSize: 22}}>Delivery in </Text>
-            <Text
-              style={{
-                textAlign: 'left',
-                fontSize: 25,
-                fontFamily: Bold,
-              }}>
+          {/* Delivery Information */}
+          <TouchableOpacity style={styles.deliveryInfo}>
+            <Text style={{textAlign: 'left', fontSize: 22}}>Delivery in</Text>
+            <Text style={{textAlign: 'left', fontSize: 25, fontFamily: Bold}}>
               1 Hour
             </Text>
           </TouchableOpacity>
@@ -209,26 +225,36 @@ const styles = StyleSheet.create({
   priceContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    width: '95%',
     columnGap: 10,
+  },
+  strikeThrough: {
+    fontSize: 14,
+    color: '#808488',
+    textDecorationLine: 'line-through',
+    fontFamily: Thin,
+  },
+  priceText: {
+    fontSize: 15,
+    fontFamily: Regular,
+  },
+  discountText: {
+    fontSize: 15,
+    fontFamily: Regular,
+    color: '#FA7189',
   },
   sizebtnContainer: {
     flexDirection: 'row',
-    width: '95%',
-    alignItems: 'center',
     justifyContent: 'space-evenly',
   },
   sizebtn: {
     borderColor: '#FA7189',
-    width: responsiveWidth(20),
-    height: responsiveHeight(4),
-    borderWidth: responsiveWidth(0.3),
+    borderWidth: 1,
     borderRadius: 8,
     alignItems: 'center',
     justifyContent: 'center',
+    padding: 10,
   },
   btnText: {
-    textAlign: 'center',
     color: '#FA7189',
     fontSize: responsiveFontSize(1.2),
     fontFamily: SemiBold,
@@ -239,20 +265,13 @@ const styles = StyleSheet.create({
   btnActiveColor: {
     backgroundColor: '#FA7189',
   },
-  starContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
   btnSection: {
     flexDirection: 'row',
-    alignItems: 'center',
     justifyContent: 'space-around',
   },
   deliveryInfo: {
     backgroundColor: '#FFCCD5',
-    width: '95%',
-    alignSelf: 'center',
-    paddingLeft: 20,
+    padding: 10,
     borderRadius: 10,
     marginTop: 10,
   },

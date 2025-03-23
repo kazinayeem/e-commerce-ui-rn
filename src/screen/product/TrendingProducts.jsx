@@ -14,7 +14,8 @@ import {
   responsiveHeight,
   responsiveWidth,
 } from 'react-native-responsive-dimensions';
-import { Medium, Regular } from '../../config/Font';
+import { Medium } from '../../config/Font';
+import { takaSymbol } from '../../config/Image';
 import All_Featured from './All-Featured';
 import SearchBar from './SearchBar';
 
@@ -42,21 +43,25 @@ const Item = ({item, navigation}) => {
         style={{paddingHorizontal: responsiveWidth(2)}}>
         <Text
           style={{
-            fontSize: responsiveFontSize(2.1),
+            fontSize: responsiveFontSize(1.8),
             fontFamily: Medium,
             fontWeight: '700',
           }}>
-          {item.name.substring(0, 15)}..
+          {item.name.substring(0, 30)}..
         </Text>
-        <Text
+        {/* <Text
           style={{
             fontSize: responsiveFontSize(1.2),
             fontFamily: Regular,
             fontWeight: '700',
           }}>
           {item.description.substring(0, 40)}
+        </Text> */}
+        <Text>
+          {item?.priceByVariant && item?.priceByVariant[0]?.price
+            ? 'Click to see price'
+            : `${takaSymbol}${item.price}`}
         </Text>
-        <Text>₹{item.price}</Text>
       </TouchableOpacity>
     </View>
   );
@@ -68,7 +73,7 @@ const TrendingProducts = () => {
 
   useEffect(() => {
     axios
-      .get('https://myshop-2-production.up.railway.app/api/products')
+      .get('https://myshop-2-production.up.railway.app/api/products?limit=50')
       .then(res => setproduct(res.data.products))
       .catch(e => {
         console.log(e);

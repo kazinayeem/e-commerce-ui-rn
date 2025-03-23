@@ -1,14 +1,22 @@
-import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
-import {FlatList} from 'react-native-gesture-handler';
-import {Regular} from '../../config/Font';
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { FlatList } from 'react-native-gesture-handler';
+import { Regular } from '../../config/Font';
 
-const Item = ({title, url}) => (
-  <TouchableOpacity style={styles.item}>
-    <Image source={{uri: url}} style={styles.image} width={60} height={60} />
-    <Text style={styles.text}>{title}</Text>
-  </TouchableOpacity>
-);
+const Item = ({name, image}) => {
+  console.log('categoryData', name, 'categoryData');
+  return (
+    <TouchableOpacity style={styles.item}>
+      <Image
+        source={{uri: image}}
+        style={styles.image}
+        width={60}
+        height={60}
+      />
+      <Text style={styles.text}>{name}</Text>
+    </TouchableOpacity>
+  );
+};
 
 const Category = props => {
   return (
@@ -18,8 +26,8 @@ const Category = props => {
         showsVerticalScrollIndicator={false}
         horizontal
         data={props.data}
-        renderItem={({item}) => <Item title={item.name} url={item.url} />}
-        keyExtractor={item => item.name}
+        renderItem={({item}) => <Item name={item.name} image={item.image} />}
+        keyExtractor={item => item._id}
       />
     </View>
   );

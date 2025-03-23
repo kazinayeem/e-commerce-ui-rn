@@ -1,5 +1,5 @@
-import * as React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import * as React from 'react';
 import Product from './Product';
 import SingleProduct from './singleproduct/SingleProduct';
 import TrendingProducts from './TrendingProducts';
@@ -18,8 +18,11 @@ export default function ProductNavigation() {
         options={{headerShown: false}}
       />
       <Stack.Screen name="Product" component={Product} />
-
-      <Stack.Screen name="SingleProduct" component={SingleProduct} />
+      <Stack.Screen
+        name="SingleProduct"
+        component={SingleProduct}
+        options={{headerShown: false}}
+      />
     </Stack.Navigator>
   );
 }
